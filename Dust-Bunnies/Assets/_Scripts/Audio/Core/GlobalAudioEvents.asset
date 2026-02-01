@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 921e34690ef95fb4797f453af53ac4cc, type: 3}
+  m_Name: GlobalAudioEvents
+  m_EditorClassIdentifier: Assembly-CSharp::AudioEvents
+  uiClick:
+    Guid:
+      Data1: -94084380
+      Data2: 1249075584
+      Data3: -302801236
+      Data4: 140683315
+    Path: event:/UI/Click
+  playerFootstep:
+    Guid:
+      Data1: 1274931322
+      Data2: 1260153366
+      Data3: 110367624
+      Data4: -799895185
+    Path: event:/SFX/Footsteps
+  playerJump:
+    Guid:
+      Data1: 194091676
+      Data2: 1160456994
+      Data3: 1772513956
+      Data4: 507334573
+    Path: event:/SFX/Jump
+  playerLand:
+    Guid:
+      Data1: 1659316740
+      Data2: 1312617862
+      Data3: -1253384024
+      Data4: -1339012371
+    Path: event:/SFX/Land
+  playerBounce:
+    Guid:
+      Data1: 1347213841
+      Data2: 1191615355
+      Data3: 1395483068
+      Data4: -493099881
+    Path: event:/SFX/Steam
+  freeze:
+    Guid:
+      Data1: -1338412086
+      Data2: 1215525512
+      Data3: 2010237871
+      Data4: -637129962
+    Path: event:/SFX/Freeze
+  unfreeze:
+    Guid:
+      Data1: -94084380
+      Data2: 1249075584
+      Data3: -302801236
+      Data4: 140683315
+    Path: event:/UI/Click
+  cameraShoot:
+    Guid:
+      Data1: -270852150
+      Data2: 1179166225
+      Data3: 361765764
+      Data4: 1591729529
+    Path: event:/SFX/Shoot
+  playerDeath:
+    Guid:
+      Data1: -1258241596
+      Data2: 1190199210
+      Data3: 1146160292
+      Data4: 131578553
+    Path: event:/SFX/Damage
+  enemyDeath:
+    Guid:
+      Data1: -1258241596
+      Data2: 1190199210
+      Data3: 1146160292
+      Data4: 131578553
+    Path: event:/SFX/Damage
+  enemyJump:
+    Guid:
+      Data1: -809523720
+      Data2: 1318747584
+      Data3: -1957353555
+      Data4: -61982647
+    Path: event:/SFX/CopJump
+  music:
+    Guid:
+      Data1: 649667210
+      Data2: 1083267220
+      Data3: -983580280
+      Data4: -728603961
+    Path: event:/Music/Music
+  ambient:
+    Guid:
+      Data1: -3058632
+      Data2: 1266869434
+      Data3: 734454454
+      Data4: 1548507495
+    Path: event:/Ambience/Ambience
