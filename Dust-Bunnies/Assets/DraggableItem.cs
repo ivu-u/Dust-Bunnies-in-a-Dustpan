@@ -12,6 +12,8 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     private Vector2 originalAnchoredPosition;
     private int originalSiblingIndex;
 
+    public static DraggableItem CurrentlyDragging = null;
+
     void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
@@ -32,6 +34,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         canvasGroup.alpha = 0.6f;
         canvasGroup.blocksRaycasts = false;
         transform.SetParent(canvas.transform);
+        CurrentlyDragging = this;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -44,27 +47,17 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     {
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
+        CurrentlyDragging = null;
 
         GameObject hitObject = eventData.pointerEnter;
         bool dropSuccess = false;
 
         if (hitObject != null)
         {
-            // CASE 1: TRASH
-            if (IsNameInHierarchy(hitObject, "Trash"))
+            
+            if (IsNameInHierarchy(hitObject, "Page"))
             {
-                PlayerJournal journal = FindFirstObjectByType<PlayerJournal>();
-                if (journal != null)
-                {
-                    journal.RequestDelete(gameObject, this);
-                }
-                return;
-            }
-
-            // CASE 2: PAGES or STAGING AREA
-            if (IsNameInHierarchy(hitObject, "Page") || IsNameInHierarchy(hitObject, "Staging"))
-            {
-                Transform targetTransform = GetTargetInHierarchy(hitObject.transform, "Page", "Staging");
+                Transform targetTransform = GetTargetInHierarchy(hitObject.transform, "Page");
                 RectTransform targetRect = targetTransform.GetComponent<RectTransform>();
 
                 // Strict containment check
@@ -135,11 +128,11 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         return false;
     }
 
-    Transform GetTargetInHierarchy(Transform t, string key1, string key2)
+    Transform GetTargetInHierarchy(Transform t, string key1)
     {
         while (t != null)
         {
-            if (t.name.Contains(key1) || t.name.Contains(key2)) return t;
+            if (t.name.Contains(key1)) return t;
             t = t.parent;
             if (t != null && t.GetComponent<Canvas>() != null) break;
         }
