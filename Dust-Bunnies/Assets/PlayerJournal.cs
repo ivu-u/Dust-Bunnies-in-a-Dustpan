@@ -226,6 +226,7 @@ public class PlayerJournal : MonoBehaviour
         {
             StartCoroutine(LockCursorNextFrame());
         }
+        journalPanel.SetActive(isJournalOpen);
         Cursor.visible = isJournalOpen;
         
         // disable player movement when journal is open
