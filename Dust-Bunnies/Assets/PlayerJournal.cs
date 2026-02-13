@@ -21,6 +21,7 @@ public class PlayerJournal : MonoBehaviour
     public GameObject polaroidPrefab;
     public GameObject stickyNotePrefab;
     public GameObject photoInboxPanel;
+    public GameObject photosShaderPanel;
     public Transform inboxContent;
     public Button togglePhotosButton;
     public Button newNoteButton;
@@ -77,12 +78,14 @@ public class PlayerJournal : MonoBehaviour
     private bool isJournalOpen = false;
     private bool isCameraMode = false;
     private bool isPhotoInboxOpen = false;
+    private bool isPhotosPanelOpen = false;
 
     void Start()
     {
         journalPanel.SetActive(isJournalOpen);  // journal starts closed
         cameraOverlay.SetActive(isCameraMode);  // camera mode starts off
         photoInboxPanel.SetActive(isPhotoInboxOpen); // inbox starts closed
+        if (photosShaderPanel != null) photosShaderPanel.SetActive(isPhotosPanelOpen); // photos panel starts closed
         
         // initialize cursor and player movement for gameplay
         Cursor.lockState = CursorLockMode.Locked;
@@ -393,8 +396,13 @@ public class PlayerJournal : MonoBehaviour
                 // Inbox is closing -> Slide Journal CENTER
                 slideCoroutine = StartCoroutine(SlideJournalTo(centeredX));
             }
+        }
 
-            // FEATURE: Add Visual Feedback for the button color depending on state
+        // Toggle the photos panel
+        if (photosShaderPanel != null)
+        {
+            isPhotosPanelOpen = isPhotoInboxOpen;
+            photosShaderPanel.SetActive(isPhotosPanelOpen);
         }
     }
 
