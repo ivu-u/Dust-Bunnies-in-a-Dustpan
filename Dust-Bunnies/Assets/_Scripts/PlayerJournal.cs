@@ -168,7 +168,6 @@ public class PlayerJournal : MonoBehaviour
                 {
                     holdIndicator.gameObject.SetActive(true);
                     holdIndicator.fillAmount = holdTimer / holdDuration;
-                    Debug.Log($"Hold progress: {holdIndicator.fillAmount}");
                 }
 
                 // Check if held long enough
@@ -221,6 +220,15 @@ public class PlayerJournal : MonoBehaviour
         if (isJournalOpen)
         {
             Cursor.lockState = CursorLockMode.None;
+            
+            // Ensure FocusDimmer is off when opening journal
+            if (JournalItemFocus.FocusDimmer == null)
+            {
+                GameObject dimmerObj = GameObject.Find("FocusDimmer");
+                if (dimmerObj != null) JournalItemFocus.FocusDimmer = dimmerObj;
+            }
+            if (JournalItemFocus.FocusDimmer != null)
+                JournalItemFocus.FocusDimmer.SetActive(false);
         }
         else
         {

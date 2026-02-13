@@ -538,6 +538,7 @@ GameObject:
   - component: {fileID: 9001642916726122654}
   - component: {fileID: 141544844430608831}
   - component: {fileID: 4930522705075731781}
+  - component: {fileID: 1662181503734667629}
   m_Layer: 5
   m_Name: StickyNoteItem
   m_TagString: Untagged
@@ -634,6 +635,20 @@ MonoBehaviour:
   trashIconBtn: {fileID: 3198072072949549221}
   yesBtn: {fileID: 4512111279529106818}
   noBtn: {fileID: 5311273292351405677}
+--- !u!114 &1662181503734667629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4355668189683766221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2c270b749e9f4da385a0001f7404c46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  focusScale: 2
+  animationSpeed: 10
 --- !u!1 &4482970650805608254
 GameObject:
   m_ObjectHideFlags: 0

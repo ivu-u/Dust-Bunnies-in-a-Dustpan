@@ -1478,6 +1478,7 @@ GameObject:
   - component: {fileID: 2791811116086253297}
   - component: {fileID: 4780528653359466208}
   - component: {fileID: 7602791982733218079}
+  - component: {fileID: 6573423790992103587}
   m_Layer: 5
   m_Name: PolaroidItem
   m_TagString: Untagged
@@ -1575,6 +1576,20 @@ MonoBehaviour:
   trashIconBtn: {fileID: 8725585086691051715}
   yesBtn: {fileID: 7291690913790832568}
   noBtn: {fileID: 4375395609535520521}
+--- !u!114 &6573423790992103587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7312021508176079258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2c270b749e9f4da385a0001f7404c46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  focusScale: 2
+  animationSpeed: 10
 --- !u!1 &7784224294700588460
 GameObject:
   m_ObjectHideFlags: 0
