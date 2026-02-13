@@ -22,3 +22,5 @@
 *.svnn
 *.sbr
 .DS_Store
+.vscode
+*.slnx

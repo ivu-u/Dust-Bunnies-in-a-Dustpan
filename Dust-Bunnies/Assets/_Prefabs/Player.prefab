@@ -74,8 +74,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterController: {fileID: 8189818858799356806}
   camHead: {fileID: 7403470775012371508}
+  playerCamera: {fileID: 0}
   speed: 1
   rotationSpeed: 2
+  camTransitionSpeed: 5
+  overheadForwardOffset: 0.4
+  overheadDownAngle: 60
+  lookAroundTiltAngle: 15
+  lookAroundSideOffset: 0.2
 --- !u!1 &2805246557926474894
 GameObject:
   m_ObjectHideFlags: 0
@@ -190,7 +196,7 @@ Transform:
   m_GameObject: {fileID: 2953759789136914515}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -324,7 +330,7 @@ Transform:
   m_GameObject: {fileID: 5955296993433472297}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
