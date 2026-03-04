@@ -9,12 +9,12 @@ public class Mole : MonoBehaviour
     private bool _isUp;
     private bool _isAnimating;
 
-    private GameManager _gameManager;
+    private WhackAMoleGameManager _gameManager;
 
     [SerializeField] private float raiseHeight = 1.5f;
     [SerializeField] private float moveSpeed = 5f;
 
-    public void Initialize(GameManager manager)
+    public void Initialize(WhackAMoleGameManager manager)
     {
         _gameManager = manager;
 

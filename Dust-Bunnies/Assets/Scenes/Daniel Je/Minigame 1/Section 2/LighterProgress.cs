@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Progress : MonoBehaviour
+public class LighterProgress : MonoBehaviour
 {
     [SerializeField]
     private Canvas canvas;
@@ -9,7 +9,7 @@ public class Progress : MonoBehaviour
     [SerializeField]
     private Transform target;
     [SerializeField]
-    private ProgressBar progressBar;
+    private LighterProgressBar progressBar;
     [SerializeField]
     private float _threshold = 30f;
     [SerializeField]

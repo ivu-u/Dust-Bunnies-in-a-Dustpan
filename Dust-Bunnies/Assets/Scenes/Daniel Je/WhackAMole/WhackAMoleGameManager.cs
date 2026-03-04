@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 
-public class GameManager : MonoBehaviour
+public class WhackAMoleGameManager : MonoBehaviour
 {
     [SerializeField] private float spawnInterval = 1.5f;
     [SerializeField] private float moleStayTime = 1.0f;

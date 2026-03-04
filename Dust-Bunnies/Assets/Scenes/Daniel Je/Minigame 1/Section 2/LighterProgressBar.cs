@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ProgressBar : MonoBehaviour
+public class LighterProgressBar : MonoBehaviour
 {
     [Range(0,1)]
     [SerializeField] private float progress;
