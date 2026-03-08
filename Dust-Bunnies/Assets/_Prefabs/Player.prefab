@@ -77,11 +77,14 @@ MonoBehaviour:
   playerCamera: {fileID: 0}
   speed: 1
   rotationSpeed: 2
-  camTransitionSpeed: 5
+  lookSmoothing: 5
+  freeReturnTweenDuration: 1
   overheadForwardOffset: 0.4
   overheadDownAngle: 60
+  overheadTweenDuration: 1
   lookAroundTiltAngle: 15
   lookAroundSideOffset: 0.2
+  lookAroundTweenDuration: 0.5
 --- !u!1 &2805246557926474894
 GameObject:
   m_ObjectHideFlags: 0
@@ -220,7 +223,7 @@ Camera:
   m_ShutterSpeed: 0.005
   m_Aperture: 16
   m_FocusDistance: 10
-  m_FocalLength: 50
+  m_FocalLength: 15.638705
   m_BladeCount: 5
   m_Curvature: {x: 2, y: 11}
   m_BarrelClipping: 0.25
@@ -235,7 +238,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 65
   orthographic: 0
   orthographic size: 5
   m_Depth: -1

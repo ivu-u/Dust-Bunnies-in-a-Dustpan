@@ -1,4 +1,5 @@
 using System;
+using PrimeTween;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -7,16 +8,25 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform camHead;
     [SerializeField] private Camera playerCamera;
     [SerializeField] private float speed = 10f;
+
+    [Header("Free Look Settings")]
     [SerializeField] private float rotationSpeed = 2f;
-    [SerializeField] private float lookSmoothing = 5f;
-    [SerializeField] private float camTransitionSpeed = 3f;
-    
+    [SerializeField] private float lookSmoothing = 10f;
+    [SerializeField] private float freeReturnTweenDuration = 1f;
+
     [Header("Locked Overhead Settings")]
     [SerializeField] private float overheadForwardOffset = 0.3f;
     [SerializeField] private float overheadDownAngle = 60f;
-        [Header("Locked Look Around Settings")]
+    [SerializeField] private float overheadFOVReduction = 10f;
+    [SerializeField] private float overheadEnterAngle = 35f;
+    [SerializeField] private float overheadExitMouseYThreshold = 0.1f;
+    [SerializeField] private float overheadTweenDuration = 1f;
+
+    [Header("Locked Look Around Settings")]
     [SerializeField] private float lookAroundTiltAngle = 15f;
     [SerializeField] private float lookAroundSideOffset = 0.2f;
+    [SerializeField] private float lookAroundFOVReduction = 5f;
+    [SerializeField] private float lookAroundTweenDuration = 0.5f;
 
     enum CamState {
         Free,
@@ -29,6 +39,9 @@ public class PlayerMovement : MonoBehaviour
     
     private CamState currentCamState = CamState.Free;
     private Vector3 originalCamLocalPos;
+    private Vector3 overheadCamLocalPos;
+    private Vector3 lookAroundLeftCamLocalPos;
+    private Vector3 lookAroundRightCamLocalPos;
     private float originalFOV;
     private float currRotationSpeedZ = 0f;
     private float currRotationSpeedX = 0f;
@@ -40,64 +53,74 @@ public class PlayerMovement : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         
         originalCamLocalPos = camHead.localPosition;
-        if (playerCamera != null)
-            originalFOV = playerCamera.fieldOfView;
+        overheadCamLocalPos = originalCamLocalPos + new Vector3(0, 0, overheadForwardOffset);
+        lookAroundLeftCamLocalPos = originalCamLocalPos + new Vector3(-lookAroundSideOffset, 0, 0);
+        lookAroundRightCamLocalPos = originalCamLocalPos + new Vector3(lookAroundSideOffset, 0, 0);
+        originalFOV = playerCamera.fieldOfView;
     }
 
     // Update is called once per frame
     void Update() {
+        // Translate player
         Vector3 move = new(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
-
         move = transform.TransformDirection(move);
         move.Normalize();
         characterController.SimpleMove(move * speed);
 
+        // Rotate player left/right with mouse X movement, with smoothing
         currRotationSpeedZ = Mathf.Lerp(currRotationSpeedZ, Input.GetAxis("Mouse X") * rotationSpeed, Time.deltaTime * lookSmoothing);
         transform.Rotate(Vector3.up * currRotationSpeedZ);
 
-        // Handles returning from locked cam states
-        if (currentCamState == CamState.LockedOverhead)
-        {
-            mouseYIntegrator += Time.deltaTime * Input.GetAxis("Mouse Y");
-            if (mouseYIntegrator > 0.1f || Math.Abs(Mathf.DeltaAngle(this.transform.localEulerAngles.y, 90f)) > 20f)
-            {
-                SetCamStateReturnFree();
-            }
+        // Manual Cam Controls
+        if (Input.GetKeyDown(KeyCode.Q) && currentCamState == CamState.Free) {
+            SetCamStateLookAroundLeft();
+        } else if (Input.GetKeyDown(KeyCode.E) && currentCamState == CamState.Free) {
+            SetCamStateLookAroundRight();
+        } else if ((Input.GetKeyUp(KeyCode.Q) && currentCamState == CamState.LockedLookAroundLeft) 
+                || (Input.GetKeyUp(KeyCode.E) && currentCamState == CamState.LockedLookAroundRight)) {
+            SetCamStateReturnFree();
+        }
+    }
+
+    void OnTriggerStay(Collider other)
+    {
+        if (other.TryGetComponent<DeskOverlookZone>(out DeskOverlookZone zone)) {
+            CollideWithDeskOverlookZone(zone, false);
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.TryGetComponent<DeskOverlookZone>(out DeskOverlookZone zone)) {
+            CollideWithDeskOverlookZone(zone, true);
         }
     }
 
     // LateUpdate is used to ensure camera updates happen after all movement/rotation in Update
     void LateUpdate() {
-        switch (currentCamState) {
-            case CamState.Free:
-                CamFree();
-                break;
-            case CamState.LockedOverhead:
-                CamLockedOverhead();
-                break;
-            case CamState.ReturnFree:
-                CamReturnFree();
-                break;
-            case CamState.LockedLookAroundLeft:
-            case CamState.LockedLookAroundRight:
-                CamLookAround();
-                break;
+        if (currentCamState == CamState.Free) {
+            CamFree();
         }
     }
 
-    // Called by DeskOverlookZone while player is in the zone and on exit
+    // Called on Trigger while player is in the zone and on exit
     public void CollideWithDeskOverlookZone(DeskOverlookZone zone, bool exiting) {
-        if (exiting) {
-            if (currentCamState == CamState.LockedOverhead) {
+        if (currentCamState == CamState.LockedOverhead)
+        {
+            mouseYIntegrator += Time.deltaTime * Input.GetAxis("Mouse Y");
+            if (mouseYIntegrator > overheadExitMouseYThreshold
+                    || !AngleInRange(transform.localEulerAngles.y, zone.triggerDirectionMinAngle, zone.triggerDirectionMaxAngle)
+                    || exiting)
+            {
                 SetCamStateReturnFree();
             }
-            return;
-        }
-        float angleToZone = transform.localEulerAngles.y;
-        if (AngleInRange(angleToZone, zone.triggerDirectionMinAngle, zone.triggerDirectionMaxAngle)
-            && currentCamState == CamState.Free
-            && camHead.localEulerAngles.x > 35f && camHead.localEulerAngles.x < 90f) {
-            SetCamStateLockedOverhead();
+        } else {
+            float angleToZone = transform.localEulerAngles.y;
+            if (AngleInRange(angleToZone, zone.triggerDirectionMinAngle, zone.triggerDirectionMaxAngle)
+                && currentCamState == CamState.Free
+                && camHead.localEulerAngles.x > overheadEnterAngle && camHead.localEulerAngles.x < 90f) {
+                SetCamStateLockedOverhead();
+            }
         }
     }
     
@@ -107,79 +130,41 @@ public class PlayerMovement : MonoBehaviour
         e.x -= currRotationSpeedX;
         e.x = RestrictAngle(e.x, -85f, 85f);
         camHead.localEulerAngles = e;
-        
-        // Smoothly return to original position
-        if (camHead.localPosition != originalCamLocalPos) {
-            camHead.localPosition = Vector3.Lerp(camHead.localPosition, originalCamLocalPos, Time.deltaTime * camTransitionSpeed);
-        }
-        
-        if (playerCamera != null)
-            playerCamera.fieldOfView = Mathf.Lerp(playerCamera.fieldOfView, originalFOV, Time.deltaTime * camTransitionSpeed);
     }
     
     private void CamLockedOverhead() {
-        // Move camera slightly forward to lean over desk
-        Vector3 targetPos = originalCamLocalPos + new Vector3(0, 0, overheadForwardOffset);
-        if (camHead.localPosition != targetPos) {
-            camHead.localPosition = Vector3.Lerp(camHead.localPosition, targetPos, Time.deltaTime * camTransitionSpeed);
-        }
-        
-        // Pitch down to look at desk
-        Vector3 e = camHead.localEulerAngles;
-        e.x = Mathf.LerpAngle(e.x, overheadDownAngle, Time.deltaTime * camTransitionSpeed);
-        e.z = Mathf.LerpAngle(e.z, 0f, Time.deltaTime * camTransitionSpeed);
-        camHead.localEulerAngles = e;
-        
-        if (playerCamera != null)
-            playerCamera.fieldOfView = Mathf.Lerp(playerCamera.fieldOfView, originalFOV, Time.deltaTime * camTransitionSpeed);
+        Sequence.Create()
+            .Group(Tween.LocalPosition(camHead, overheadCamLocalPos, duration: overheadTweenDuration, ease: Ease.InOutQuad))
+            .Group(TweenCamRotationX(overheadDownAngle, duration: overheadTweenDuration, ease: Ease.InOutQuad))
+            .Group(Tween.CameraFieldOfView(playerCamera, originalFOV - overheadFOVReduction, duration: overheadTweenDuration, ease: Ease.Linear));
     }
 
     private void CamReturnFree() {
-        // Return to original position
-        camHead.localPosition = Vector3.Lerp(camHead.localPosition, originalCamLocalPos, Time.deltaTime * camTransitionSpeed);
-        
-        // Return to looking straight ahead
-        Vector3 e = camHead.localEulerAngles;
-        e.x = Mathf.LerpAngle(e.x, 0f, Time.deltaTime * camTransitionSpeed);
-        e.z = Mathf.LerpAngle(e.z, 0f, Time.deltaTime * camTransitionSpeed);
-        camHead.localEulerAngles = e;
-        
-        // Return to original FOV
-        if (playerCamera != null)
-            playerCamera.fieldOfView = Mathf.Lerp(playerCamera.fieldOfView, originalFOV, Time.deltaTime * camTransitionSpeed);
-        
-        // Check if close enough to original position and angle to switch to Free state
-        print(Vector3.Distance(camHead.localPosition, originalCamLocalPos));
-        print(Mathf.Abs(Mathf.DeltaAngle(camHead.localEulerAngles.x, 0f)));
-        if (Vector3.Distance(camHead.localPosition, originalCamLocalPos) < 0.1f
-            && Mathf.Abs(Mathf.DeltaAngle(camHead.localEulerAngles.x, 0f)) < 5f
-            && Mathf.Abs(Mathf.DeltaAngle(camHead.localEulerAngles.z, 0f)) < 0.1f) {
-            currentCamState = CamState.Free;
-        }
+        Sequence.Create()
+            .Group(Tween.LocalPosition(camHead, originalCamLocalPos, duration: freeReturnTweenDuration, ease: Ease.InOutQuad))
+            .Group(TweenCamRotationX(0f, duration: freeReturnTweenDuration, ease: Ease.InOutQuad))
+            .Group(TweenCamRotationZ(0f, duration: freeReturnTweenDuration, ease: Ease.InOutQuad))
+            .Group(Tween.CameraFieldOfView(playerCamera, originalFOV, duration: freeReturnTweenDuration, ease: Ease.Linear))
+            .OnComplete(target: this, target => target.SetCamStateFree());
     }
 
     private void CamLookAround() {
-        Vector3 targetPos = originalCamLocalPos + new Vector3(
-            currentCamState == CamState.LockedLookAroundLeft ? -lookAroundSideOffset : lookAroundSideOffset,
-            0,
-            0);
-        if (camHead.localPosition != targetPos) {
-            camHead.localPosition = Vector3.Lerp(camHead.localPosition, targetPos, Time.deltaTime * camTransitionSpeed);
-        }
-
-        Vector3 e = camHead.localEulerAngles;
-        float targetTilt = currentCamState == CamState.LockedLookAroundLeft ? lookAroundTiltAngle : -lookAroundTiltAngle;
-        e.z = Mathf.LerpAngle(e.z, targetTilt, Time.deltaTime * camTransitionSpeed);
-        e.x = Mathf.LerpAngle(e.x, 0f, Time.deltaTime * camTransitionSpeed);
-        camHead.localEulerAngles = e;
+        Sequence.Create()
+            .Group(Tween.LocalPosition(camHead, 
+                currentCamState == CamState.LockedLookAroundLeft ? lookAroundLeftCamLocalPos : lookAroundRightCamLocalPos, 
+                duration: lookAroundTweenDuration, ease: Ease.InOutQuad))
+            .Group(TweenCamRotationX(0, duration: lookAroundTweenDuration, ease: Ease.InOutQuad))
+            .Group(TweenCamRotationZ(currentCamState == CamState.LockedLookAroundLeft ? lookAroundTiltAngle : -lookAroundTiltAngle,
+                duration: lookAroundTweenDuration, ease: Ease.InOutQuad))
+            .Group(Tween.CameraFieldOfView(playerCamera, originalFOV - lookAroundFOVReduction, duration: lookAroundTweenDuration, ease: Ease.Linear));
     }
     
 
-    public void SetCamStateFree() => currentCamState = CamState.Free;
-    public void SetCamStateLockedOverhead() { currentCamState = CamState.LockedOverhead; mouseYIntegrator = 0f; }
-    public void SetCamStateReturnFree() => currentCamState = CamState.ReturnFree;
-    public void SetCamStateLookAroundLeft() => currentCamState = CamState.LockedLookAroundLeft;
-    public void SetCamStateLookAroundRight() => currentCamState = CamState.LockedLookAroundRight;
+    public void SetCamStateFree() { currentCamState = CamState.Free; currRotationSpeedX = 0f;}
+    public void SetCamStateLockedOverhead() { currentCamState = CamState.LockedOverhead; mouseYIntegrator = 0f; CamLockedOverhead();}
+    public void SetCamStateReturnFree() { currentCamState = CamState.ReturnFree; CamReturnFree();}
+    public void SetCamStateLookAroundLeft() { currentCamState = CamState.LockedLookAroundLeft; CamLookAround();}
+    public void SetCamStateLookAroundRight() { currentCamState = CamState.LockedLookAroundRight; CamLookAround();}
 
     /// <summary>
     /// Helper method for head rotation, to prevent bending backwards
@@ -208,5 +193,26 @@ public class PlayerMovement : MonoBehaviour
             return normalizedAngle >= normalizedMin && normalizedAngle <= normalizedMax;
         else
             return normalizedAngle >= normalizedMin || normalizedAngle <= normalizedMax;
+    }
+
+    private Tween TweenCamRotationX(float endValue, float duration, Easing ease) {
+        float startValue = camHead.localEulerAngles.x;
+        if (startValue > 180f) startValue -= 360f;
+        return Tween.Custom(startValue, endValue, duration: duration, onValueChange: (float val) => {
+            Vector3 e = camHead.localEulerAngles;
+            e.x = val;
+            camHead.localEulerAngles = e;
+        }, ease: ease);
+    }
+
+    private Tween TweenCamRotationZ(float endValue, float duration, Easing ease) {
+        float startValue = camHead.localEulerAngles.z;
+        if (startValue > 180f) startValue -= 360f;
+        return Tween.Custom(startValue, endValue, duration: duration, onValueChange: (float val) => {
+            Vector3 e = camHead.localEulerAngles;
+            print(e.z + " to " + val);
+            e.z = val;
+            camHead.localEulerAngles = e;
+        }, ease: ease);
     }
 }
