@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour {
-    public enum PlayerState {
+    public enum PlayerState {   // wip (not sure if we need this)
         Default,
         Crouch,
         Menu,
@@ -12,6 +12,11 @@ public class Player : MonoBehaviour {
     public event System.Action OnInteractPerformed;
 
     private PlayerInputs _playerInputs;
+
+    void Awake() {
+        _playerInputs = new();
+        _playerInputs.Enable();    // should probably move this at some point 
+    }
 
     private void OnEnable() {
         ActivateDefaultInputs();
