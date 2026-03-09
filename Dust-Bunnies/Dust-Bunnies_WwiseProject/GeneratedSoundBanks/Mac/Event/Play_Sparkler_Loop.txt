@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3667990691	Play_Sparkler_Loop			\Default Work Unit\Play_Sparkler_Loop	
+

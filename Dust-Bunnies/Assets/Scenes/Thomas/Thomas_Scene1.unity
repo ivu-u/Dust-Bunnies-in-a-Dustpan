@@ -357,6 +357,7 @@ GameObject:
   - component: {fileID: 726892100}
   - component: {fileID: 726892103}
   - component: {fileID: 726892102}
+  - component: {fileID: 726892104}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -462,6 +463,40 @@ MonoBehaviour:
   scalingFactor: 1
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
+--- !u!114 &726892104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726892099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c38ae239f4c6224ab8fae9b56ab2ff0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: ed68596f4e70db84abdfe9b880b121a6, type: 2}
+  useCallbacks: 0
+  stopSoundOnDestroy: 1
+  Callbacks: []
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  eventIdInternal: 0
+  valueGuidInternal: 
+  m_callbackDataInternal: {fileID: 0}
+  MultiPositionType: 1
+  multiPositionTypeLabel: 0
+  attenuationSphereColor: {r: 1, g: 0, b: 0, a: 0.1}
+  LargeModePositions: []
+  multiPositionArray: []
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1032,6 +1067,14 @@ PrefabInstance:
       propertyPath: speed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5661372990698979659, guid: 1e9cc19460a655d47b93292d9a410758, type: 3}
+      propertyPath: stepInterval
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5661372990698979659, guid: 1e9cc19460a655d47b93292d9a410758, type: 3}
+      propertyPath: footstep.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: c0ec060ae5e28bf4ea2a5d6e9ab431ed, type: 2}
     - target: {fileID: 6073944056012419622, guid: 1e9cc19460a655d47b93292d9a410758, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.7386501

@@ -10,11 +10,20 @@
     "Type": "Event",
     "GUID": "{657936C6-D18B-4871-BBD3-C6D8D9D5A0F6}",
     "Language": "SFX",
-    "Hash": "{6AD8ED9D-0E82-B19A-E4D8-DAE512E788F0}",
+    "Hash": "{2F331353-E307-EF04-9809-ECA85BD64F7D}",
     "ObjectPath": "Play_Footsteps",
     "ShortName": "Play_Footsteps",
     "Path": "Event/Play_Footsteps.bnk",
     "Media": [
+     {
+      "Id": "89682474",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Footsteps\\plr_footsteps_05.wav",
+      "Path": "Media/89682474.wem",
+      "CachePath": "A6/{A61D9DB3-F6EB-6682-B7B2-E547CB652530}.wem"
+     },
      {
       "Id": "373365222",
       "Language": "SFX",
@@ -25,6 +34,69 @@
       "CachePath": "9A/{9A3EB415-C82B-42AD-CDA4-BBA9A921BA1A}.wem"
      },
      {
+      "Id": "399677128",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Footsteps\\plr_footsteps_07.wav",
+      "Path": "Media/399677128.wem",
+      "CachePath": "10/{10557A96-E597-ACA3-FE58-C4CC20AC9A03}.wem"
+     },
+     {
+      "Id": "459281462",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Footsteps\\plr_footsteps_01.wav",
+      "Path": "Media/459281462.wem",
+      "CachePath": "93/{93D55236-1C0F-4F29-0D5B-F6CA1564DB2F}.wem"
+     },
+     {
+      "Id": "495285930",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Footsteps\\plr_footsteps_06.wav",
+      "Path": "Media/495285930.wem",
+      "CachePath": "6A/{6AFA3D8D-C9D7-2638-0F51-BB6FF2CA7B32}.wem"
+     },
+     {
+      "Id": "540813598",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Footsteps\\plr_footsteps_09.wav",
+      "Path": "Media/540813598.wem",
+      "CachePath": "67/{67D058E0-B3D4-EA6F-1CCE-BC2AE55E842A}.wem"
+     },
+     {
+      "Id": "559106679",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Footsteps\\plr_footsteps_08.wav",
+      "Path": "Media/559106679.wem",
+      "CachePath": "52/{52E52C3E-9355-8A43-7BE4-6E299E071A23}.wem"
+     },
+     {
+      "Id": "582856993",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Footsteps\\plr_footsteps_02.wav",
+      "Path": "Media/582856993.wem",
+      "CachePath": "22/{2294B81F-394F-FEA3-B098-4780B6C4C36B}.wem"
+     },
+     {
+      "Id": "630738228",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Footsteps\\plr_footsteps_11.wav",
+      "Path": "Media/630738228.wem",
+      "CachePath": "A7/{A73CA1AD-33CF-E43B-6B9F-9AB956CE326B}.wem"
+     },
+     {
       "Id": "646741151",
       "Language": "SFX",
       "Streaming": "false",
@@ -32,6 +104,33 @@
       "ShortName": "plr_footsteps_overlay_01.wav",
       "Path": "Media/646741151.wem",
       "CachePath": "A8/{A83A7BCF-81B2-9164-2FE9-D30244600796}.wem"
+     },
+     {
+      "Id": "713732340",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Footsteps\\plr_footsteps_04.wav",
+      "Path": "Media/713732340.wem",
+      "CachePath": "78/{782552CF-FA9A-4B72-E07C-BFA34EF9A5A7}.wem"
+     },
+     {
+      "Id": "735330647",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Footsteps\\plr_footsteps_12.wav",
+      "Path": "Media/735330647.wem",
+      "CachePath": "A7/{A7CCFACE-4ACE-1D93-4FED-FB33AF9F5BC7}.wem"
+     },
+     {
+      "Id": "768778178",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Footsteps\\plr_footsteps_03.wav",
+      "Path": "Media/768778178.wem",
+      "CachePath": "08/{08254A27-4189-2C52-0969-39280863FF54}.wem"
      },
      {
       "Id": "791443014",
@@ -50,8 +149,47 @@
       "ShortName": "plr_footsteps_overlay_02.wav",
       "Path": "Media/825804531.wem",
       "CachePath": "52/{521DC24E-B010-0DC0-7C3B-587EF83CFA6E}.wem"
+     },
+     {
+      "Id": "1040687265",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Footsteps\\plr_footsteps_10.wav",
+      "Path": "Media/1040687265.wem",
+      "CachePath": "4F/{4F2E03B8-B0A8-41B8-D609-0776C94DC006}.wem"
      }
     ],
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "513367100",
+       "Name": "New_Parametric_EQ (Custom)",
+       "ObjectPath": "\\Containers\\SFX Work Unit\\Footsteps\\Footsteps_Overlay\\[Effect Slot [0]: (Parametric EQ)]\\New_Parametric_EQ (Custom)",
+       "GUID": "{D3AC65AE-D2C6-41BF-9789-900A86EE3D74}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      },
+      {
+       "Id": "551377216",
+       "Name": "New_Parametric_EQ (Custom)",
+       "ObjectPath": "\\Containers\\SFX Work Unit\\Footsteps\\Footsteps_Ethereal\\[Effect Slot [1]: (Parametric EQ)]\\New_Parametric_EQ (Custom)",
+       "GUID": "{D2D822D2-3BE6-496C-ACF5-498D90BA4498}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      }
+     ],
+     "ShareSets": [
+      {
+       "Id": "86245554",
+       "Name": "Attack_Remover",
+       "ObjectPath": "\\Effects\\Factory Effects\\Compressor\\Attack_Remover",
+       "GUID": "{174E7B9A-A16F-4CA7-86D0-530212B5A6AA}",
+       "LibName": "Wwise Compressor",
+       "LibId": "7077891"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "3854155799",
@@ -63,22 +201,81 @@
       "DurationMax": "0.5082292",
       "MediaRefs": [
        {
+        "Id": "89682474"
+       },
+       {
         "Id": "373365222"
        },
        {
+        "Id": "399677128"
+       },
+       {
+        "Id": "459281462"
+       },
+       {
+        "Id": "495285930"
+       },
+       {
+        "Id": "540813598"
+       },
+       {
+        "Id": "559106679"
+       },
+       {
+        "Id": "582856993"
+       },
+       {
+        "Id": "630738228"
+       },
+       {
         "Id": "646741151"
+       },
+       {
+        "Id": "713732340"
+       },
+       {
+        "Id": "735330647"
+       },
+       {
+        "Id": "768778178"
        },
        {
         "Id": "791443014"
        },
        {
         "Id": "825804531"
+       },
+       {
+        "Id": "1040687265"
+       }
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "513367100"
+        },
+        {
+         "Id": "551377216"
+        }
+       ],
+       "ShareSets": [
+        {
+         "Id": "86245554"
+        }
+       ]
+      },
+      "AuxBusRefs": [
+       {
+        "Id": "348963605",
+        "Name": "Reverb",
+        "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb",
+        "GUID": "{E90EFC91-CB5A-4F18-A18C-F6828E5879E6}"
        }
       ]
      }
     ]
    }
   ],
-  "FileHash": "{767F3B35-A562-A417-3BDD-9EAD68BD39EE}"
+  "FileHash": "{BF663123-4CF4-65C3-F1C8-0B8AD28A98AE}"
  }
 }

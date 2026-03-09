@@ -54,6 +54,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Sparkler_Loop" ID="{E0A0AACC-E063-422A-9D75-320B6BCF21EE}">
+					<ChildrenList>
+						<Action Name="" ID="{79DFB60F-E620-4706-B4D1-BFABC3DA4ABB}" ShortID="886106131">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Sparkle" ID="{EF454E15-620B-491B-B858-5AEC866624B6}" WorkUnitID="{43C2252E-DCD3-44B3-A3E7-636268BFE8A3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

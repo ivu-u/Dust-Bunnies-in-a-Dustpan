@@ -17,6 +17,7 @@ namespace AK
         static const AkUniqueID PLAY_AMB_ROOM_STREET_01 = 2134236060U;
         static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
         static const AkUniqueID PLAY_MX_CHILDHOOD = 2272849752U;
+        static const AkUniqueID PLAY_SPARKLER_LOOP = 3667990691U;
     } // namespace EVENTS
 
     namespace SWITCHES

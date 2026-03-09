@@ -6,10 +6,10 @@
 				<Effect Name="New_Parametric_EQ" ID="{38818C76-B353-48D3-BCC7-446039FBE6B5}" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3"/>
 				<Effect Name="Footstep_Compressor" ID="{6F6022D4-981D-4F8B-B50A-6C54F53E0B12}" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
 					<PropertyList>
-						<Property Name="AttackTime" Type="Real32" Value="0.07"/>
+						<Property Name="AttackTime" Type="Real32" Value="0"/>
 						<Property Name="Ratio" Type="Real32" Value="2.5"/>
-						<Property Name="ReleaseTime" Type="Real32" Value="0"/>
-						<Property Name="Threshold" Type="Real32" Value="-44.1"/>
+						<Property Name="ReleaseTime" Type="Real32" Value="0.47"/>
+						<Property Name="Threshold" Type="Real32" Value="-44.6"/>
 					</PropertyList>
 				</Effect>
 			</ChildrenList>
