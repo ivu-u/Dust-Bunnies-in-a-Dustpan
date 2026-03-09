@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}" SchemaVersion="133">
+	<Busses>
+		<WorkUnit Name="Default Work Unit" ID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}" PersistMode="Standalone">
+			<ChildrenList>
+				<Bus Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<ReferenceList>
+						<Reference Name="AudioDevice" PluginName="System" CompanyID="0" PluginID="174" PluginType="7">
+							<ObjectRef Name="System" ID="{4924C48D-2D63-4F35-9D40-B4DC886C22F5}" WorkUnitID="{A06E9B31-E4F4-4B95-A16F-8107ADB2704A}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AuxBus Name="Reverb" ID="{E90EFC91-CB5A-4F18-A18C-F6828E5879E6}">
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<EffectSlot Name="" ID="{923FC937-A07E-4D21-B8AB-92B6718D3B4E}" ShortID="659517805">
+										<ReferenceList>
+											<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+												<ObjectRef Name="Space_Dreaming" ID="{4FF7C4B2-37B0-4DFF-8E8A-1420102AE2DD}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+											</Reference>
+										</ReferenceList>
+									</EffectSlot>
+								</ObjectList>
+							</ObjectLists>
+						</AuxBus>
+						<Bus Name="SFX" ID="{8D954BD1-37BF-4C6A-B849-5E1E2690394C}">
+							<ChildrenList>
+								<Bus Name="Footstep" ID="{1657EC3F-4A0A-467A-8030-25A934241F4E}">
+									<ChildrenList>
+										<Bus Name="FootstepEthereal" ID="{20ECAD15-14BE-44C0-B5EB-36CB1EA82D7F}">
+											<PropertyList>
+												<Property Name="BusVolume" Type="Real64">
+													<ValueList>
+														<Value>-10</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ObjectLists>
+												<ObjectList Name="Effects">
+													<EffectSlot Name="" ID="{0964F95F-4214-450D-A6F2-EB26C3DD00DD}" ShortID="700575463">
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+																<ObjectRef Name="Space_Dreaming" ID="{4FF7C4B2-37B0-4DFF-8E8A-1420102AE2DD}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</ObjectList>
+											</ObjectLists>
+										</Bus>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<EffectSlot Name="" ID="{D915E639-33B0-43F9-9F3C-F53DE0CD0E29}" ShortID="429090503">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+														<ObjectRef Name="Footstep_Compressor" ID="{6F6022D4-981D-4F8B-B50A-6C54F53E0B12}" WorkUnitID="{3166C6A7-BE21-4A7F-AB0A-5C9A9D316501}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</ObjectList>
+									</ObjectLists>
+								</Bus>
+							</ChildrenList>
+						</Bus>
+						<Bus Name="Music" ID="{775EDE36-C56F-4508-9C5A-ADAD9C4ED199}"/>
+						<Bus Name="Ambience" ID="{81889309-9F76-43EA-A22A-73DFD1D76715}"/>
+					</ChildrenList>
+				</Bus>
+			</ChildrenList>
+		</WorkUnit>
+	</Busses>
+</WwiseDocument>

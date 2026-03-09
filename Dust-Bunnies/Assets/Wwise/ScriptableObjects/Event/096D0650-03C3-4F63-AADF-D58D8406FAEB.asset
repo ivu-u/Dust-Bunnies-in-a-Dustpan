@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2768950acc045be4da453ad530cfca42, type: 3}
+  m_Name: 096D0650-03C3-4F63-AADF-D58D8406FAEB
+  m_EditorClassIdentifier: 
+  objectName: Play_amb_room_interior_01
+  id: 3152322375
+  guid: 096D0650-03C3-4F63-AADF-D58D8406FAEB
+  IsInUserDefinedSoundBank: 0

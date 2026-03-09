@@ -1,0 +1,148 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1355168291",
+    "Type": "User",
+    "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
+    "Language": "SFX",
+    "Hash": "{B095F0E4-89E0-8697-32E7-113174A6DB2B}",
+    "ObjectPath": "Init",
+    "ShortName": "Init",
+    "Path": "Init.bnk",
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "2901166873",
+       "Name": "Footstep_Compressor",
+       "ObjectPath": "\\Effects\\Default Work Unit\\Footstep_Compressor",
+       "GUID": "{6F6022D4-981D-4F8B-B50A-6C54F53E0B12}",
+       "LibName": "Wwise Compressor",
+       "LibId": "7077891"
+      },
+      {
+       "Id": "3216246379",
+       "Name": "Space_Dreaming",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Huge Spaces\\Space_Dreaming",
+       "GUID": "{4FF7C4B2-37B0-4DFF-8E8A-1420102AE2DD}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ],
+     "AudioDevices": [
+      {
+       "Id": "2317455096",
+       "Name": "No_Output",
+       "ObjectPath": "\\Devices\\Default Work Unit\\No_Output",
+       "GUID": "{F5E6EE2D-7528-4079-B2C6-E62FB49182B6}",
+       "LibName": "No Output",
+       "LibId": "11862023"
+      },
+      {
+       "Id": "3859886410",
+       "Name": "System",
+       "ObjectPath": "\\Devices\\Default Work Unit\\System",
+       "GUID": "{4924C48D-2D63-4F35-9D40-B4DC886C22F5}",
+       "LibName": "System",
+       "LibId": "11403271"
+      }
+     ]
+    },
+    "Busses": [
+     {
+      "Id": "85412153",
+      "Name": "Ambience",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Ambience",
+      "GUID": "{81889309-9F76-43EA-A22A-73DFD1D76715}"
+     },
+     {
+      "Id": "393239870",
+      "Name": "SFX",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\SFX",
+      "GUID": "{8D954BD1-37BF-4C6A-B849-5E1E2690394C}"
+     },
+     {
+      "Id": "1469239341",
+      "Name": "FootstepEthereal",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\SFX\\Footstep\\FootstepEthereal",
+      "GUID": "{20ECAD15-14BE-44C0-B5EB-36CB1EA82D7F}",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "3216246379"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "1866025847",
+      "Name": "Footstep",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\SFX\\Footstep",
+      "GUID": "{1657EC3F-4A0A-467A-8030-25A934241F4E}",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "2901166873"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "2246998526",
+      "Name": "Main Audio Bus",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus",
+      "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
+     },
+     {
+      "Id": "3991942870",
+      "Name": "Music",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Music",
+      "GUID": "{775EDE36-C56F-4508-9C5A-ADAD9C4ED199}"
+     }
+    ],
+    "AuxBusses": [
+     {
+      "Id": "348963605",
+      "Name": "Reverb",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb",
+      "GUID": "{E90EFC91-CB5A-4F18-A18C-F6828E5879E6}",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "3216246379"
+        }
+       ]
+      }
+     }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "3989786198",
+      "Name": "Page_Flip",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Page_Flip",
+      "GUID": "{3891B45B-F068-4A70-9B95-A760E1425674}",
+      "Switches": [
+       {
+        "Id": "1164125444",
+        "Name": "Forward",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Page_Flip\\Forward",
+        "GUID": "{C8E7B1A9-D09F-4FC1-9381-6F0A0DA54DA4}"
+       },
+       {
+        "Id": "2669077622",
+        "Name": "Backward",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Page_Flip\\Backward",
+        "GUID": "{1494953B-B271-4B09-9855-4CCCD5670972}"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{190F16F5-0884-F217-E7E5-6E862E9823F6}"
+ }
+}

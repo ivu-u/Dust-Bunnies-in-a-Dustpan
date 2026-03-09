@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{3166C6A7-BE21-4A7F-AB0A-5C9A9D316501}" SchemaVersion="133">
+	<Effects>
+		<WorkUnit Name="Default Work Unit" ID="{3166C6A7-BE21-4A7F-AB0A-5C9A9D316501}" PersistMode="Standalone">
+			<ChildrenList>
+				<Effect Name="New_Parametric_EQ" ID="{38818C76-B353-48D3-BCC7-446039FBE6B5}" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3"/>
+				<Effect Name="Footstep_Compressor" ID="{6F6022D4-981D-4F8B-B50A-6C54F53E0B12}" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+					<PropertyList>
+						<Property Name="AttackTime" Type="Real32" Value="0.07"/>
+						<Property Name="Ratio" Type="Real32" Value="2.5"/>
+						<Property Name="ReleaseTime" Type="Real32" Value="0"/>
+						<Property Name="Threshold" Type="Real32" Value="-44.1"/>
+					</PropertyList>
+				</Effect>
+			</ChildrenList>
+		</WorkUnit>
+	</Effects>
+</WwiseDocument>

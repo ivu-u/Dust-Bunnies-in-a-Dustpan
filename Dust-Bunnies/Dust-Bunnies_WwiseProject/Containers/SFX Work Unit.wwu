@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{43C2252E-DCD3-44B3-A3E7-636268BFE8A3}" SchemaVersion="133">
+	<Containers>
+		<WorkUnit Name="SFX Work Unit" ID="{43C2252E-DCD3-44B3-A3E7-636268BFE8A3}" PersistMode="Standalone">
+			<ChildrenList>
+				<RandomSequenceContainer Name="Footsteps_Ethereal" ID="{501CC030-EB90-4D99-81AE-7CB0D0F9A1D3}" ShortID="645309746">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-6</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B81D318-81E8-4EF5-A889-A2898F690ADA}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="Reverb" ID="{E90EFC91-CB5A-4F18-A18C-F6828E5879E6}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="plr_footsteps_01" ID="{0351B635-C33C-4447-B373-56ED983C1CB8}" ShortID="514124203">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B81D318-81E8-4EF5-A889-A2898F690ADA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="plr_footsteps_01" ID="{7FA390B0-D91C-4C38-B44E-1A297C76E5D9}">
+									<Language>SFX</Language>
+									<AudioFile>Footsteps\plr_footsteps_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="459281462"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="plr_footsteps_01" ID="{7FA390B0-D91C-4C38-B44E-1A297C76E5D9}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="plr_footsteps_02" ID="{3D9AEE4D-73CC-4327-8149-0F17CA98EFBB}" ShortID="755673044">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B81D318-81E8-4EF5-A889-A2898F690ADA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="plr_footsteps_02" ID="{DBB838E1-7492-452C-AE19-2A8A2EA20890}">
+									<Language>SFX</Language>
+									<AudioFile>Footsteps\plr_footsteps_02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="582856993"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="plr_footsteps_02" ID="{DBB838E1-7492-452C-AE19-2A8A2EA20890}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="plr_footsteps_03" ID="{2C76E1D9-72CF-45C5-947B-5783686E2084}" ShortID="886431575">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B81D318-81E8-4EF5-A889-A2898F690ADA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="plr_footsteps_03" ID="{C421F158-5E43-466C-9A6F-E104179F9269}">
+									<Language>SFX</Language>
+									<AudioFile>Footsteps\plr_footsteps_03.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="768778178"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="plr_footsteps_03" ID="{C421F158-5E43-466C-9A6F-E104179F9269}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="plr_footsteps_04" ID="{379F3965-37C3-4611-9650-070049030593}" ShortID="879189681">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B81D318-81E8-4EF5-A889-A2898F690ADA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="plr_footsteps_04" ID="{661A6493-F367-430D-A960-7AFCAAD81E24}">
+									<Language>SFX</Language>
+									<AudioFile>Footsteps\plr_footsteps_04.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="713732340"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="plr_footsteps_04" ID="{661A6493-F367-430D-A960-7AFCAAD81E24}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="plr_footsteps_05" ID="{518AA128-2828-4BEA-B42A-5B52B4D51245}" ShortID="277623733">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B81D318-81E8-4EF5-A889-A2898F690ADA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="plr_footsteps_05" ID="{42B3A4A3-A563-4252-A8AF-3BBEEDA0D95D}">
+									<Language>SFX</Language>
+									<AudioFile>Footsteps\plr_footsteps_05.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="89682474"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="plr_footsteps_05" ID="{42B3A4A3-A563-4252-A8AF-3BBEEDA0D95D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="plr_footsteps_06" ID="{9B491F4F-A3C4-4CC8-A626-4579CC47F420}" ShortID="1057528320">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B81D318-81E8-4EF5-A889-A2898F690ADA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="plr_footsteps_06" ID="{85722652-533A-470E-B876-DFAD29479D64}">
+									<Language>SFX</Language>
+									<AudioFile>Footsteps\plr_footsteps_06.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="495285930"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="plr_footsteps_06" ID="{85722652-533A-470E-B876-DFAD29479D64}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="plr_footsteps_07" ID="{4AAE7AB5-C9E0-421F-82A5-6EE896BF0F51}" ShortID="149716919">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B81D318-81E8-4EF5-A889-A2898F690ADA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="plr_footsteps_07" ID="{325C9FF5-38B4-4B66-AC3F-EBFBCAFE23D7}">
+									<Language>SFX</Language>
+									<AudioFile>Footsteps\plr_footsteps_07.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="399677128"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="plr_footsteps_07" ID="{325C9FF5-38B4-4B66-AC3F-EBFBCAFE23D7}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="plr_footsteps_08" ID="{778629E5-83AA-4BF4-89C6-9E7820AB2F8A}" ShortID="29344248">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B81D318-81E8-4EF5-A889-A2898F690ADA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="plr_footsteps_08" ID="{C308707D-4EB4-46AC-8435-704186D1E180}">
+									<Language>SFX</Language>
+									<AudioFile>Footsteps\plr_footsteps_08.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="559106679"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="plr_footsteps_08" ID="{C308707D-4EB4-46AC-8435-704186D1E180}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="plr_footsteps_09" ID="{3347BB3E-E864-47D7-B427-93F293CB8837}" ShortID="1042295335">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B81D318-81E8-4EF5-A889-A2898F690ADA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="plr_footsteps_09" ID="{FBD578C9-8C5A-4FBC-A8BF-4A311CBD0BA8}">
+									<Language>SFX</Language>
+									<AudioFile>Footsteps\plr_footsteps_09.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="540813598"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="plr_footsteps_09" ID="{FBD578C9-8C5A-4FBC-A8BF-4A311CBD0BA8}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="plr_footsteps_10" ID="{4F4E1857-3523-4F53-B4D7-124961E3A21A}" ShortID="169900985">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B81D318-81E8-4EF5-A889-A2898F690ADA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="plr_footsteps_10" ID="{D3EF52B2-5EAA-49FA-A61D-CAD3B55093E1}">
+									<Language>SFX</Language>
+									<AudioFile>Footsteps\plr_footsteps_10.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1040687265"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="plr_footsteps_10" ID="{D3EF52B2-5EAA-49FA-A61D-CAD3B55093E1}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="plr_footsteps_11" ID="{C58D91AA-6149-4907-B2A7-90F7C37135EF}" ShortID="174969053">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B81D318-81E8-4EF5-A889-A2898F690ADA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="plr_footsteps_11" ID="{798F32AE-42A8-4271-9A76-75004079675E}">
+									<Language>SFX</Language>
+									<AudioFile>Footsteps\plr_footsteps_11.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="630738228"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="plr_footsteps_11" ID="{798F32AE-42A8-4271-9A76-75004079675E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="plr_footsteps_12" ID="{DA1C835E-C079-4E08-9858-823EAFF5B9D0}" ShortID="749262004">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B81D318-81E8-4EF5-A889-A2898F690ADA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="plr_footsteps_12" ID="{236BD795-843E-4B1F-A6DD-C82F8467D6ED}">
+									<Language>SFX</Language>
+									<AudioFile>Footsteps\plr_footsteps_12.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="735330647"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="plr_footsteps_12" ID="{236BD795-843E-4B1F-A6DD-C82F8467D6ED}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="Effects">
+							<EffectSlot Name="" ID="{B86C88C9-F9ED-40B6-94DE-8F7597C11715}" ShortID="399496032">
+								<ReferenceList>
+									<Reference Name="Effect" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+										<ObjectRef Name="Attack_Remover" ID="{174E7B9A-A16F-4CA7-86D0-530212B5A6AA}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+									</Reference>
+								</ReferenceList>
+							</EffectSlot>
+							<EffectSlot Name="" ID="{49ED6A97-7689-42C7-8345-FFE3DD1D61A3}" ShortID="804904036">
+								<ReferenceList>
+									<Reference Name="Effect">
+										<Custom CreatedFrom="{38818C76-B353-48D3-BCC7-446039FBE6B5}">
+											<Effect Name="New_Parametric_EQ (Custom)" ID="{D2D822D2-3BE6-496C-ACF5-498D90BA4498}" ShortID="551377216" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+												<PropertyList>
+													<Property Name="FilterTypeBand3" Type="int32" Value="7"/>
+													<Property Name="FrequencyBand3" Type="Real32" Value="9329.022"/>
+													<Property Name="GainBand3" Type="Real32" Value="-0.1538462"/>
+													<Property Name="QFactorBand3" Type="Real32" Value="0.607918"/>
+												</PropertyList>
+											</Effect>
+										</Custom>
+									</Reference>
+								</ReferenceList>
+							</EffectSlot>
+						</ObjectList>
+					</ObjectLists>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="Footsteps_Overlay" ID="{E2EE3DC1-99A6-4FF6-8E36-970B01C970F4}" ShortID="427797560">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-4</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B81D318-81E8-4EF5-A889-A2898F690ADA}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Footstep" ID="{1657EC3F-4A0A-467A-8030-25A934241F4E}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="plr_footsteps_overlay_01" ID="{5B3F07DD-188E-4236-9EBA-037E1BBF025F}" ShortID="684226751">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B81D318-81E8-4EF5-A889-A2898F690ADA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="plr_footsteps_overlay_01" ID="{DC1E7629-C709-45DE-8911-5BA0DCF3E6B1}">
+									<Language>SFX</Language>
+									<AudioFile>plr_footsteps_overlay_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="646741151"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="plr_footsteps_overlay_01" ID="{DC1E7629-C709-45DE-8911-5BA0DCF3E6B1}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="plr_footsteps_overlay_02" ID="{19A71DAA-022E-49C4-ABE6-6B25673C7B61}" ShortID="975247712">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B81D318-81E8-4EF5-A889-A2898F690ADA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="plr_footsteps_overlay_02" ID="{A85B3514-A385-40BD-942F-1F898FE0A508}">
+									<Language>SFX</Language>
+									<AudioFile>plr_footsteps_overlay_02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="825804531"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="plr_footsteps_overlay_02" ID="{A85B3514-A385-40BD-942F-1F898FE0A508}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="plr_footsteps_overlay_03" ID="{7963580F-1E60-40D4-8E2C-383033B1383C}" ShortID="949937120">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B81D318-81E8-4EF5-A889-A2898F690ADA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="plr_footsteps_overlay_03" ID="{C7EE056B-3A4C-47BD-A5E5-B80D70F372E3}">
+									<Language>SFX</Language>
+									<AudioFile>plr_footsteps_overlay_03.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="373365222"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="plr_footsteps_overlay_03" ID="{C7EE056B-3A4C-47BD-A5E5-B80D70F372E3}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="plr_footsteps_overlay_04" ID="{BA7DCFEA-E3B5-4FEE-8268-2336A43DF344}" ShortID="256090599">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B81D318-81E8-4EF5-A889-A2898F690ADA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="plr_footsteps_overlay_04" ID="{0084B92F-13C6-42E8-8112-02BF049A0E18}">
+									<Language>SFX</Language>
+									<AudioFile>plr_footsteps_overlay_04.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="791443014"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="plr_footsteps_overlay_04" ID="{0084B92F-13C6-42E8-8112-02BF049A0E18}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>
