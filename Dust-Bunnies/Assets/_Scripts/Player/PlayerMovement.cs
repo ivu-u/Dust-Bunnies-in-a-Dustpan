@@ -210,7 +210,7 @@ public class PlayerMovement : MonoBehaviour
         if (startValue > 180f) startValue -= 360f;
         return Tween.Custom(startValue, endValue, duration: duration, onValueChange: (float val) => {
             Vector3 e = camHead.localEulerAngles;
-            print(e.z + " to " + val);
+            //print(e.z + " to " + val);
             e.z = val;
             camHead.localEulerAngles = e;
         }, ease: ease);
