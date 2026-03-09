@@ -1,5 +1,17 @@
 Audio Bus	ID	Name			Wwise Object Path	Notes
+	85412153	Ambience			\Default Work Unit\Main Audio Bus\Ambience	
+	393239870	SFX			\Default Work Unit\Main Audio Bus\SFX	
+	1469239341	FootstepEthereal			\Default Work Unit\Main Audio Bus\SFX\Footstep\FootstepEthereal	
+	1866025847	Footstep			\Default Work Unit\Main Audio Bus\SFX\Footstep	
 	2246998526	Main Audio Bus			\Default Work Unit\Main Audio Bus	
+	3991942870	Music			\Default Work Unit\Main Audio Bus\Music	
+
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	348963605	Reverb			\Default Work Unit\Main Audio Bus\Reverb	
+
+Effect plug-ins	ID	Name	Type				Notes
+	2901166873	Footstep_Compressor	Wwise Compressor			
+	3216246379	Space_Dreaming	Wwise RoomVerb			
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			

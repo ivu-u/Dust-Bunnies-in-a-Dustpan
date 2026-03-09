@@ -25,6 +25,35 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Footsteps" ID="{657936C6-D18B-4871-BBD3-C6D8D9D5A0F6}">
+					<ChildrenList>
+						<Action Name="" ID="{DF033CFB-516A-4A85-8663-18F578EA8EE4}" ShortID="784943539">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Footsteps_Ethereal" ID="{501CC030-EB90-4D99-81AE-7CB0D0F9A1D3}" WorkUnitID="{43C2252E-DCD3-44B3-A3E7-636268BFE8A3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{3F6162A5-1B36-4733-AA60-3985ED95EF5A}" ShortID="720923744">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Footsteps_Overlay" ID="{E2EE3DC1-99A6-4FF6-8E36-970B01C970F4}" WorkUnitID="{43C2252E-DCD3-44B3-A3E7-636268BFE8A3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_MX_Childhood" ID="{202C98C0-29C9-4172-BBD4-4878CFA0A5DB}">
+					<ChildrenList>
+						<Action Name="" ID="{3B5F5723-595D-4C45-A94D-797C1CF83796}" ShortID="518582944">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MX_Childhood" ID="{5C4FFEF8-8C5E-45F2-83E0-A6652EA0CAFE}" WorkUnitID="{5DDF8A02-71F0-4FB3-9BDC-786385EDC375}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

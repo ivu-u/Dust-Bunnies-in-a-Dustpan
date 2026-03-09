@@ -3,13 +3,23 @@
 	<Containers>
 		<WorkUnit Name="SFX Work Unit" ID="{43C2252E-DCD3-44B3-A3E7-636268BFE8A3}" PersistMode="Standalone">
 			<ChildrenList>
-				<RandomSequenceContainer Name="Footsteps" ID="{501CC030-EB90-4D99-81AE-7CB0D0F9A1D3}" ShortID="645309746">
+				<RandomSequenceContainer Name="Footsteps_Ethereal" ID="{501CC030-EB90-4D99-81AE-7CB0D0F9A1D3}" ShortID="645309746">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-6</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B81D318-81E8-4EF5-A889-A2898F690ADA}"/>
 						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="Reverb" ID="{E90EFC91-CB5A-4F18-A18C-F6828E5879E6}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -275,6 +285,140 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="plr_footsteps_12" ID="{236BD795-843E-4B1F-A6DD-C82F8467D6ED}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="Effects">
+							<EffectSlot Name="" ID="{B86C88C9-F9ED-40B6-94DE-8F7597C11715}" ShortID="399496032">
+								<ReferenceList>
+									<Reference Name="Effect" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+										<ObjectRef Name="Attack_Remover" ID="{174E7B9A-A16F-4CA7-86D0-530212B5A6AA}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+									</Reference>
+								</ReferenceList>
+							</EffectSlot>
+							<EffectSlot Name="" ID="{49ED6A97-7689-42C7-8345-FFE3DD1D61A3}" ShortID="804904036">
+								<ReferenceList>
+									<Reference Name="Effect">
+										<Custom CreatedFrom="{38818C76-B353-48D3-BCC7-446039FBE6B5}">
+											<Effect Name="New_Parametric_EQ (Custom)" ID="{D2D822D2-3BE6-496C-ACF5-498D90BA4498}" ShortID="551377216" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+												<PropertyList>
+													<Property Name="FilterTypeBand3" Type="int32" Value="7"/>
+													<Property Name="FrequencyBand3" Type="Real32" Value="9329.022"/>
+													<Property Name="GainBand3" Type="Real32" Value="-0.1538462"/>
+													<Property Name="QFactorBand3" Type="Real32" Value="0.607918"/>
+												</PropertyList>
+											</Effect>
+										</Custom>
+									</Reference>
+								</ReferenceList>
+							</EffectSlot>
+						</ObjectList>
+					</ObjectLists>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="Footsteps_Overlay" ID="{E2EE3DC1-99A6-4FF6-8E36-970B01C970F4}" ShortID="427797560">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-4</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B81D318-81E8-4EF5-A889-A2898F690ADA}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Footstep" ID="{1657EC3F-4A0A-467A-8030-25A934241F4E}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="plr_footsteps_overlay_01" ID="{5B3F07DD-188E-4236-9EBA-037E1BBF025F}" ShortID="684226751">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B81D318-81E8-4EF5-A889-A2898F690ADA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="plr_footsteps_overlay_01" ID="{DC1E7629-C709-45DE-8911-5BA0DCF3E6B1}">
+									<Language>SFX</Language>
+									<AudioFile>plr_footsteps_overlay_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="646741151"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="plr_footsteps_overlay_01" ID="{DC1E7629-C709-45DE-8911-5BA0DCF3E6B1}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="plr_footsteps_overlay_02" ID="{19A71DAA-022E-49C4-ABE6-6B25673C7B61}" ShortID="975247712">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B81D318-81E8-4EF5-A889-A2898F690ADA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="plr_footsteps_overlay_02" ID="{A85B3514-A385-40BD-942F-1F898FE0A508}">
+									<Language>SFX</Language>
+									<AudioFile>plr_footsteps_overlay_02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="825804531"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="plr_footsteps_overlay_02" ID="{A85B3514-A385-40BD-942F-1F898FE0A508}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="plr_footsteps_overlay_03" ID="{7963580F-1E60-40D4-8E2C-383033B1383C}" ShortID="949937120">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B81D318-81E8-4EF5-A889-A2898F690ADA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="plr_footsteps_overlay_03" ID="{C7EE056B-3A4C-47BD-A5E5-B80D70F372E3}">
+									<Language>SFX</Language>
+									<AudioFile>plr_footsteps_overlay_03.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="373365222"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="plr_footsteps_overlay_03" ID="{C7EE056B-3A4C-47BD-A5E5-B80D70F372E3}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="plr_footsteps_overlay_04" ID="{BA7DCFEA-E3B5-4FEE-8268-2336A43DF344}" ShortID="256090599">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B81D318-81E8-4EF5-A889-A2898F690ADA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="plr_footsteps_overlay_04" ID="{0084B92F-13C6-42E8-8112-02BF049A0E18}">
+									<Language>SFX</Language>
+									<AudioFile>plr_footsteps_overlay_04.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="791443014"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="plr_footsteps_overlay_04" ID="{0084B92F-13C6-42E8-8112-02BF049A0E18}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

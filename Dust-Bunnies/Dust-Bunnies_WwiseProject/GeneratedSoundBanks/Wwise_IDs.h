@@ -15,6 +15,8 @@ namespace AK
     {
         static const AkUniqueID PLAY_AMB_ROOM_INTERIOR_01 = 3152322375U;
         static const AkUniqueID PLAY_AMB_ROOM_STREET_01 = 2134236060U;
+        static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
+        static const AkUniqueID PLAY_MX_CHILDHOOD = 2272849752U;
     } // namespace EVENTS
 
     namespace SWITCHES
@@ -34,8 +36,18 @@ namespace AK
 
     namespace BUSSES
     {
+        static const AkUniqueID AMBIENCE = 85412153U;
+        static const AkUniqueID FOOTSTEP = 1866025847U;
+        static const AkUniqueID FOOTSTEPETHEREAL = 1469239341U;
         static const AkUniqueID MAIN_AUDIO_BUS = 2246998526U;
+        static const AkUniqueID MUSIC = 3991942870U;
+        static const AkUniqueID SFX = 393239870U;
     } // namespace BUSSES
+
+    namespace AUX_BUSSES
+    {
+        static const AkUniqueID REVERB = 348963605U;
+    } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES
     {

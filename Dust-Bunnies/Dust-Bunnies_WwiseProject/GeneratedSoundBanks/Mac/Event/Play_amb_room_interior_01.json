@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{096D0650-03C3-4F63-AADF-D58D8406FAEB}",
     "Language": "SFX",
-    "Hash": "{D66118AC-3111-9604-9CCB-DB3A47DA9A41}",
+    "Hash": "{C0D8FA5C-71B8-7C45-2733-F2A9CAEF89EC}",
     "ObjectPath": "Play_amb_room_interior_01",
     "ShortName": "Play_amb_room_interior_01",
     "Path": "Event/Play_amb_room_interior_01.bnk",
@@ -62,6 +62,6 @@
     ]
    }
   ],
-  "FileHash": "{CAADE4DB-CA11-E9D0-DD50-BFF6218CB212}"
+  "FileHash": "{C84101BB-293A-E456-E50A-1615A59B99BE}"
  }
 }

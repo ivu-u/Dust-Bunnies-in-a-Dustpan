@@ -10,11 +10,29 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{FB7A72B1-E19E-80E2-E5EC-803B5EC579EC}",
+    "Hash": "{302B6287-CE5B-13F9-ACC4-40F62B6C2641}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
     "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "2901166873",
+       "Name": "Footstep_Compressor",
+       "ObjectPath": "\\Effects\\Default Work Unit\\Footstep_Compressor",
+       "GUID": "{6F6022D4-981D-4F8B-B50A-6C54F53E0B12}",
+       "LibName": "Wwise Compressor",
+       "LibId": "7077891"
+      },
+      {
+       "Id": "3216246379",
+       "Name": "Space_Dreaming",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Huge Spaces\\Space_Dreaming",
+       "GUID": "{4FF7C4B2-37B0-4DFF-8E8A-1420102AE2DD}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ],
      "AudioDevices": [
       {
        "Id": "2317455096",
@@ -36,10 +54,69 @@
     },
     "Busses": [
      {
+      "Id": "85412153",
+      "Name": "Ambience",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Ambience",
+      "GUID": "{81889309-9F76-43EA-A22A-73DFD1D76715}"
+     },
+     {
+      "Id": "393239870",
+      "Name": "SFX",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\SFX",
+      "GUID": "{8D954BD1-37BF-4C6A-B849-5E1E2690394C}"
+     },
+     {
+      "Id": "1469239341",
+      "Name": "FootstepEthereal",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\SFX\\Footstep\\FootstepEthereal",
+      "GUID": "{20ECAD15-14BE-44C0-B5EB-36CB1EA82D7F}",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "3216246379"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "1866025847",
+      "Name": "Footstep",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\SFX\\Footstep",
+      "GUID": "{1657EC3F-4A0A-467A-8030-25A934241F4E}",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "2901166873"
+        }
+       ]
+      }
+     },
+     {
       "Id": "2246998526",
       "Name": "Main Audio Bus",
       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus",
       "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
+     },
+     {
+      "Id": "3991942870",
+      "Name": "Music",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Music",
+      "GUID": "{775EDE36-C56F-4508-9C5A-ADAD9C4ED199}"
+     }
+    ],
+    "AuxBusses": [
+     {
+      "Id": "348963605",
+      "Name": "Reverb",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb",
+      "GUID": "{E90EFC91-CB5A-4F18-A18C-F6828E5879E6}",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "3216246379"
+        }
+       ]
+      }
      }
     ],
     "SwitchGroups": [
@@ -66,6 +143,6 @@
     ]
    }
   ],
-  "FileHash": "{CDC510BB-624D-E89B-C9F0-A3649160D618}"
+  "FileHash": "{862DCA1F-9D48-564B-F974-97B41E605BBD}"
  }
 }

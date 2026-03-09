@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{E9C033D0-735B-4BA4-AEC0-F9C72C7BB21B}",
     "Language": "SFX",
-    "Hash": "{97A9A3AB-7DD5-C450-6337-8071B9240E75}",
+    "Hash": "{8EAE6135-85CF-6C1E-3269-FD1F84828407}",
     "ObjectPath": "Play_amb_room_street_01",
     "ShortName": "Play_amb_room_street_01",
     "Path": "Event/Play_amb_room_street_01.bnk",
@@ -61,6 +61,6 @@
     ]
    }
   ],
-  "FileHash": "{AA537080-EB9F-115F-DEE8-86520193C122}"
+  "FileHash": "{93113C27-5500-57FD-E750-140203197087}"
  }
 }

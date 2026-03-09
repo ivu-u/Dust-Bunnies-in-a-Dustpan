@@ -11,6 +11,20 @@
     "StaticLib": "AkParametricEQFX"
    },
    {
+    "LibName": "Wwise Compressor",
+    "LibId": "7077891",
+    "Type": "Effect",
+    "DLL": "AkCompressor",
+    "StaticLib": "AkCompressorFX"
+   },
+   {
+    "LibName": "Wwise RoomVerb",
+    "LibId": "7733251",
+    "Type": "Effect",
+    "DLL": "AkRoomVerb",
+    "StaticLib": "AkRoomVerbFX"
+   },
+   {
     "LibName": "System",
     "LibId": "11403271",
     "Type": "AudioDevice"
@@ -21,6 +35,6 @@
     "Type": "AudioDevice"
    }
   ],
-  "FileHash": "{C82BA0A5-79D2-CCB2-C45F-D33302A9A57E}"
+  "FileHash": "{47C4FF26-2B1E-D88F-1B10-07810996CE9E}"
  }
 }
