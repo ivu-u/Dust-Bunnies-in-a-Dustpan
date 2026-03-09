@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{42626F72-6A80-43AE-9607-52F32EA10280}" SchemaVersion="133">
+	<Containers>
+		<WorkUnit Name="UI Work Unit" ID="{42626F72-6A80-43AE-9607-52F32EA10280}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Page Flip" ID="{35B2C09F-CF23-4A6B-B763-4094192EDBBF}" ShortID="1062335956">
+					<ChildrenList>
+						<SwitchContainer Name="PageFlip" ID="{7AFA5750-A745-4CFA-9FE7-7955B65B2D3B}" ShortID="766066737">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B81D318-81E8-4EF5-A889-A2898F690ADA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="Page_Flip" ID="{3891B45B-F068-4A70-9B95-A760E1425674}" WorkUnitID="{BDDEF538-0B45-4CB7-AB27-84A51A7B9D99}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Flip_Forward" ID="{A1CE455D-2E6F-406B-807D-B462B1488F0E}" ShortID="660722770">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{A56B7785-F08E-4598-8209-9E937792A0BC}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B81D318-81E8-4EF5-A889-A2898F690ADA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="ui_page_flip_01" ID="{039553A6-B746-49AC-98B4-7BDFCBDDC69A}" ShortID="22259615">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B81D318-81E8-4EF5-A889-A2898F690ADA}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ui_page_flip_01" ID="{FBD4A304-9F46-429C-B111-398B65E72667}">
+													<Language>SFX</Language>
+													<AudioFile>ui_page_flip_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="243728058"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ui_page_flip_01" ID="{FBD4A304-9F46-429C-B111-398B65E72667}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="ui_page_flip_02" ID="{E4752B69-B6A1-45D9-99AD-FB46230003FB}" ShortID="402182755">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B81D318-81E8-4EF5-A889-A2898F690ADA}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ui_page_flip_02" ID="{6D68CE77-1959-4338-A185-0A25D315BC8D}">
+													<Language>SFX</Language>
+													<AudioFile>ui_page_flip_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="500538088"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ui_page_flip_02" ID="{6D68CE77-1959-4338-A185-0A25D315BC8D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="ui_page_flip_03" ID="{A4443579-7ED5-4A1B-8FD0-B2B3F1954836}" ShortID="132245878">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B81D318-81E8-4EF5-A889-A2898F690ADA}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ui_page_flip_03" ID="{C467C459-D5CE-43EE-B5E8-B2DAA9CF85B1}">
+													<Language>SFX</Language>
+													<AudioFile>ui_page_flip_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="638479447"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ui_page_flip_03" ID="{C467C459-D5CE-43EE-B5E8-B2DAA9CF85B1}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="ui_page_flip_04" ID="{76DB5033-DA67-4019-93F4-34055763CE37}" ShortID="725546184">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B81D318-81E8-4EF5-A889-A2898F690ADA}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ui_page_flip_04" ID="{B2CE0110-A10C-4350-9F71-4FD1F156FD1B}">
+													<Language>SFX</Language>
+													<AudioFile>ui_page_flip_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="119757031"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ui_page_flip_04" ID="{B2CE0110-A10C-4350-9F71-4FD1F156FD1B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="ui_page_flip_05" ID="{C29927CE-56FC-4FBD-A262-839050ADB78B}" ShortID="893301781">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B81D318-81E8-4EF5-A889-A2898F690ADA}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ui_page_flip_05" ID="{C56F4541-A5E7-4D06-B0ED-427951489E9C}">
+													<Language>SFX</Language>
+													<AudioFile>ui_page_flip_05.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="101818284"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ui_page_flip_05" ID="{C56F4541-A5E7-4D06-B0ED-427951489E9C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Flip_Backward" ID="{013B4961-BE0B-4D3D-B33B-9BED99706DF4}" ShortID="350246844">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{D6FFF0A6-30AD-43C8-915C-A04D6E66A631}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B81D318-81E8-4EF5-A889-A2898F690ADA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="ui_page_flip_back_01" ID="{186226B5-0504-4856-BA46-058C8B41B5C5}" ShortID="673844633">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B81D318-81E8-4EF5-A889-A2898F690ADA}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ui_page_flip_back_01" ID="{F54DF9FE-BD8F-4961-90A3-0B46F54652D6}">
+													<Language>SFX</Language>
+													<AudioFile>ui_page_flip_back_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="243739393"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ui_page_flip_back_01" ID="{F54DF9FE-BD8F-4961-90A3-0B46F54652D6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="ui_page_flip_back_02" ID="{F22839AF-07AA-4E0F-979E-FFB95B96A0D5}" ShortID="565117734">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B81D318-81E8-4EF5-A889-A2898F690ADA}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ui_page_flip_back_02" ID="{D654EEC0-7CEB-4D7D-A3DB-106A4C889C45}">
+													<Language>SFX</Language>
+													<AudioFile>ui_page_flip_back_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="817192517"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ui_page_flip_back_02" ID="{D654EEC0-7CEB-4D7D-A3DB-106A4C889C45}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="ui_page_flip_back_03" ID="{9DF66081-4270-4EE5-BDFD-F31EA0850627}" ShortID="410467180">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B81D318-81E8-4EF5-A889-A2898F690ADA}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ui_page_flip_back_03" ID="{775CEDF9-52ED-4E96-833A-D5B703205F98}">
+													<Language>SFX</Language>
+													<AudioFile>ui_page_flip_back_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="877710666"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ui_page_flip_back_03" ID="{775CEDF9-52ED-4E96-833A-D5B703205F98}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="ui_page_flip_back_04" ID="{79E4219F-52B1-4B4F-9E51-9C48F0D3EAA5}" ShortID="206423415">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B81D318-81E8-4EF5-A889-A2898F690ADA}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ui_page_flip_back_04" ID="{5973FCDA-1E72-46B3-91ED-1F96E79803A9}">
+													<Language>SFX</Language>
+													<AudioFile>ui_page_flip_back_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="607001037"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ui_page_flip_back_04" ID="{5973FCDA-1E72-46B3-91ED-1F96E79803A9}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="ui_page_flip_back_05" ID="{DBB28908-25A8-4B37-B0BE-08EE16B3A2F9}" ShortID="133127888">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B81D318-81E8-4EF5-A889-A2898F690ADA}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ui_page_flip_back_05" ID="{E1116345-F16C-450C-A1E3-444473658B47}">
+													<Language>SFX</Language>
+													<AudioFile>ui_page_flip_back_05.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1035855589"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ui_page_flip_back_05" ID="{E1116345-F16C-450C-A1E3-444473658B47}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="Flip_Forward" ID="{A1CE455D-2E6F-406B-807D-B462B1488F0E}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Flip_Backward" ID="{013B4961-BE0B-4D3D-B33B-9BED99706DF4}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Backward" ID="{1494953B-B271-4B09-9855-4CCCD5670972}"/>
+										<ItemList>
+											<ItemRef Name="Flip_Backward" ID="{013B4961-BE0B-4D3D-B33B-9BED99706DF4}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Forward" ID="{C8E7B1A9-D09F-4FC1-9381-6F0A0DA54DA4}"/>
+										<ItemList>
+											<ItemRef Name="Flip_Forward" ID="{A1CE455D-2E6F-406B-807D-B462B1488F0E}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>

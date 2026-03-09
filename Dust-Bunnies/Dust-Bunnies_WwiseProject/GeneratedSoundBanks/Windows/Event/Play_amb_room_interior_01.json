@@ -1,0 +1,67 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3152322375",
+    "Type": "Event",
+    "GUID": "{096D0650-03C3-4F63-AADF-D58D8406FAEB}",
+    "Language": "SFX",
+    "Hash": "{18C4FA03-7E63-9B12-CF12-B78318976FCF}",
+    "ObjectPath": "Play_amb_room_interior_01",
+    "ShortName": "Play_amb_room_interior_01",
+    "Path": "Event/Play_amb_room_interior_01.bnk",
+    "Media": [
+     {
+      "Id": "254140761",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "amb_room_interior_01.wav",
+      "Path": "Media/254140761.wem",
+      "CachePath": "89/{891D9514-97E6-BA8F-E30B-296A047236E4}.wem"
+     }
+    ],
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "749708184",
+       "Name": "Low_Pass_20KHz (Custom)",
+       "ObjectPath": "\\Containers\\Ambience Work Unit\\2D_Ambience\\amb_room_interior_01\\[Effect Slot [0]: (Parametric EQ)]\\Low_Pass_20KHz (Custom)",
+       "GUID": "{0E891BD6-C6BC-41C0-9A6F-B16EF9434240}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      }
+     ]
+    },
+    "Events": [
+     {
+      "Id": "3152322375",
+      "Name": "Play_amb_room_interior_01",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_amb_room_interior_01",
+      "GUID": "{096D0650-03C3-4F63-AADF-D58D8406FAEB}",
+      "DurationType": "OneShot",
+      "DurationMin": "100.71448",
+      "DurationMax": "100.71448",
+      "MediaRefs": [
+       {
+        "Id": "254140761"
+       }
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "749708184"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  ],
+  "FileHash": "{59AAF964-1C49-6520-1E63-B9EE42295869}"
+ }
+}

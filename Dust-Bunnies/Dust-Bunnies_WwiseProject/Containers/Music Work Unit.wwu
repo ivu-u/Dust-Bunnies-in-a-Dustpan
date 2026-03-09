@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{5DDF8A02-71F0-4FB3-9BDC-786385EDC375}" SchemaVersion="133">
+	<Containers>
+		<WorkUnit Name="Music Work Unit" ID="{5DDF8A02-71F0-4FB3-9BDC-786385EDC375}" PersistMode="Standalone">
+			<ChildrenList>
+				<MusicPlaylistContainer Name="Test_Loop" ID="{5C4FFEF8-8C5E-45F2-83E0-A6652EA0CAFE}" ShortID="46113976">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B81D318-81E8-4EF5-A889-A2898F690ADA}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+						</Reference>
+						<Reference Name="PlaylistRoot">
+							<Custom>
+								<MusicPlaylistItem Name="" ID="{468246CA-AA93-4F82-AA56-2F89C0EC7B9E}" ShortID="938311228">
+									<PropertyList>
+										<Property Name="LoopCount" Type="int16" Value="0"/>
+									</PropertyList>
+								</MusicPlaylistItem>
+							</Custom>
+						</Reference>
+						<Reference Name="TransitionRoot">
+							<Custom>
+								<MusicTransition Name="Root" ID="{C56313E5-9FEB-4801-9F54-41AA9EDD1AD9}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{1F63F062-9DB9-4F06-9395-FD98CB0A85C1}">
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</Custom>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicSegment Name="Hypermania but first time EDM" ID="{807BF7AE-8F3E-470D-B3FC-C83D18BAA50E}" ShortID="838062763">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="64916.1458333333"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-7</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B81D318-81E8-4EF5-A889-A2898F690ADA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="Hypermania but first time EDM" ID="{84454017-5C9B-4176-B1B8-8251516B90AB}" ShortID="1021646767">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{A02327E2-C904-40E8-A8DB-2907A4B8F763}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Hypermania but first time EDM" ID="{3671BA6F-8D4C-43A3-A127-9EC3533FFAD3}">
+											<Language>SFX</Language>
+											<AudioFile>Hypermania but first time EDM.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1026801295"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<MusicTrackSequence Name="" ID="{349F1DF4-B6C6-4E42-A7C2-3B8FDB3976FB}">
+												<ObjectLists>
+													<ObjectList Name="Clips">
+														<MusicClip Name="Hypermania but first time EDM" ID="{D55685D5-2561-42BA-BD56-25D69BD94D60}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="64916.1458333333"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="Hypermania but first time EDM" ID="{3671BA6F-8D4C-43A3-A127-9EC3533FFAD3}"/>
+														</MusicClip>
+													</ObjectList>
+												</ObjectLists>
+											</MusicTrackSequence>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<MusicCue Name="Entry Cue" ID="{171940F8-3ADD-4841-B109-84C661B405A4}"/>
+									<MusicCue Name="Exit Cue" ID="{D986C4FA-AEE9-4DED-AA1D-59960529347A}">
+										<PropertyList>
+											<Property Name="CueType" Type="int16" Value="1"/>
+											<Property Name="TimeMs" Type="Real64" Value="64916.1458333333"/>
+										</PropertyList>
+									</MusicCue>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+					</ChildrenList>
+				</MusicPlaylistContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>

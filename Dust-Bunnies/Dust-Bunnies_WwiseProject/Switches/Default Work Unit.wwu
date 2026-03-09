@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{BDDEF538-0B45-4CB7-AB27-84A51A7B9D99}" SchemaVersion="133">
+	<Switches>
+		<WorkUnit Name="Default Work Unit" ID="{BDDEF538-0B45-4CB7-AB27-84A51A7B9D99}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="Page_Flip" ID="{3891B45B-F068-4A70-9B95-A760E1425674}">
+					<ChildrenList>
+						<Switch Name="Forward" ID="{C8E7B1A9-D09F-4FC1-9381-6F0A0DA54DA4}"/>
+						<Switch Name="Backward" ID="{1494953B-B271-4B09-9855-4CCCD5670972}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>

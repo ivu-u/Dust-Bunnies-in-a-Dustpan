@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{FC1A7273-D75F-43A7-A8EE-2F04ED5E8F6B}" SchemaVersion="133">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{FC1A7273-D75F-43A7-A8EE-2F04ED5E8F6B}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_amb_room_street_01" ID="{E9C033D0-735B-4BA4-AEC0-F9C72C7BB21B}">
+					<ChildrenList>
+						<Action Name="" ID="{8B5A3114-F0EA-44C9-A48C-741EAAEBCCEA}" ShortID="468200338">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="amb_room_street_01" ID="{7BB7B29C-4051-4412-82C4-3ABB4F2C2018}" WorkUnitID="{76E8B1F7-8963-4328-B66E-087A10F64EE6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_amb_room_interior_01" ID="{096D0650-03C3-4F63-AADF-D58D8406FAEB}">
+					<ChildrenList>
+						<Action Name="" ID="{EBCF88C8-F78C-43D8-AE1F-B849CBC5AFC9}" ShortID="72414434">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="amb_room_interior_01" ID="{F785935B-7CC8-4CB8-B491-AE7531FB893F}" WorkUnitID="{76E8B1F7-8963-4328-B66E-087A10F64EE6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

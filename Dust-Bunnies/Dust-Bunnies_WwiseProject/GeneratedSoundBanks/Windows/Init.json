@@ -1,0 +1,71 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1355168291",
+    "Type": "User",
+    "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
+    "Language": "SFX",
+    "Hash": "{FB7A72B1-E19E-80E2-E5EC-803B5EC579EC}",
+    "ObjectPath": "Init",
+    "ShortName": "Init",
+    "Path": "Init.bnk",
+    "Plugins": {
+     "AudioDevices": [
+      {
+       "Id": "2317455096",
+       "Name": "No_Output",
+       "ObjectPath": "\\Devices\\Default Work Unit\\No_Output",
+       "GUID": "{F5E6EE2D-7528-4079-B2C6-E62FB49182B6}",
+       "LibName": "No Output",
+       "LibId": "11862023"
+      },
+      {
+       "Id": "3859886410",
+       "Name": "System",
+       "ObjectPath": "\\Devices\\Default Work Unit\\System",
+       "GUID": "{4924C48D-2D63-4F35-9D40-B4DC886C22F5}",
+       "LibName": "System",
+       "LibId": "11403271"
+      }
+     ]
+    },
+    "Busses": [
+     {
+      "Id": "2246998526",
+      "Name": "Main Audio Bus",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus",
+      "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
+     }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "3989786198",
+      "Name": "Page_Flip",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Page_Flip",
+      "GUID": "{3891B45B-F068-4A70-9B95-A760E1425674}",
+      "Switches": [
+       {
+        "Id": "1164125444",
+        "Name": "Forward",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Page_Flip\\Forward",
+        "GUID": "{C8E7B1A9-D09F-4FC1-9381-6F0A0DA54DA4}"
+       },
+       {
+        "Id": "2669077622",
+        "Name": "Backward",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Page_Flip\\Backward",
+        "GUID": "{1494953B-B271-4B09-9855-4CCCD5670972}"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{CDC510BB-624D-E89B-C9F0-A3649160D618}"
+ }
+}

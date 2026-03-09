@@ -1,0 +1,66 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2134236060",
+    "Type": "Event",
+    "GUID": "{E9C033D0-735B-4BA4-AEC0-F9C72C7BB21B}",
+    "Language": "SFX",
+    "Hash": "{F28EAFE9-50D8-E66A-3260-51C52E9C5208}",
+    "ObjectPath": "Play_amb_room_street_01",
+    "ShortName": "Play_amb_room_street_01",
+    "Path": "Event/Play_amb_room_street_01.bnk",
+    "Media": [
+     {
+      "Id": "860070968",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "amb_room_street_01.wav",
+      "Path": "Media/860070968.wem",
+      "CachePath": "D1/{D1EF1870-3A07-8AF6-6B11-18392D8F3573}.wem"
+     }
+    ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1008402193",
+       "Name": "Low_Pass_20KHz",
+       "ObjectPath": "\\Effects\\Factory Effects\\Parametric EQ\\Low Pass Filters\\Low_Pass_20KHz",
+       "GUID": "{830124FB-B9D5-4AE8-846E-E94A74652666}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      }
+     ]
+    },
+    "Events": [
+     {
+      "Id": "2134236060",
+      "Name": "Play_amb_room_street_01",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_amb_room_street_01",
+      "GUID": "{E9C033D0-735B-4BA4-AEC0-F9C72C7BB21B}",
+      "MaxAttenuation": "15.000001",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "860070968"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1008402193"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  ],
+  "FileHash": "{22CEC7F6-2EB3-D2AC-CB58-FEBB4F742972}"
+ }
+}

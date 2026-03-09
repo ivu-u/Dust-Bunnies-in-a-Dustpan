@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2134236060	Play_amb_room_street_01			\Default Work Unit\Play_amb_room_street_01	
+
+Effect plug-ins	ID	Name	Type				Notes
+	1008402193	Low_Pass_20KHz	Wwise Parametric EQ			
+
