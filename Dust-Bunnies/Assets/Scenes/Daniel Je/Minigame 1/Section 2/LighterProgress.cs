@@ -18,6 +18,8 @@ public class LighterProgress : MonoBehaviour
     private float decreaseRate = 0.15f;
     private float _progress = 0;
     private Vector3 pos;
+    private bool isSparklerLit = false;
+    // public AK.Wwise.Event sparklerLoop;
 
     void Update()
     {
@@ -37,18 +39,35 @@ public class LighterProgress : MonoBehaviour
         {
             _progress = 1;
             //add win logic here
-        } else
+        }
+        else
         {
             if (distance <= _threshold)
             {
                 _progress += increaseRate * Time.deltaTime;
-            } else
+            }
+            else
             {
                 _progress -= decreaseRate * Time.deltaTime;
             }
         }
 
+        if (_progress >= 1f && !isSparklerLit)
+        {
+            isSparklerLit = true;
+            SetSparklerState(true);
+        }
+
         _progress = Mathf.Clamp01(_progress);
         progressBar.SetProgress(_progress);
+    }
+    public void SetSparklerState(bool isLit)
+    {
+        if (isLit)
+        {
+            SFXManager.PlaySFX(SFXManager.Events.SparklerLoop);
+            // AkUnitySoundEngine.PostEvent("Play_Sparkler_Loop", gameObject);
+            // sparklerLoop.Post(gameObject);
+        }
     }
 }

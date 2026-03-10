@@ -1,0 +1,8 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3854155799	Play_Footsteps			\Default Work Unit\Play_Footsteps	
+
+Effect plug-ins	ID	Name	Type				Notes
+	86245554	Attack_Remover	Wwise Compressor			
+	513367100	New_Parametric_EQ (Custom)	Wwise Parametric EQ			
+	551377216	New_Parametric_EQ (Custom)	Wwise Parametric EQ			
+

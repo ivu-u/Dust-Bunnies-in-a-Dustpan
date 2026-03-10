@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{FC1A7273-D75F-43A7-A8EE-2F04ED5E8F6B}" SchemaVersion="133">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{FC1A7273-D75F-43A7-A8EE-2F04ED5E8F6B}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_amb_room_street_01" ID="{E9C033D0-735B-4BA4-AEC0-F9C72C7BB21B}">
+					<ChildrenList>
+						<Action Name="" ID="{8B5A3114-F0EA-44C9-A48C-741EAAEBCCEA}" ShortID="468200338">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="amb_room_street_01" ID="{7BB7B29C-4051-4412-82C4-3ABB4F2C2018}" WorkUnitID="{76E8B1F7-8963-4328-B66E-087A10F64EE6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_amb_room_interior_01" ID="{096D0650-03C3-4F63-AADF-D58D8406FAEB}">
+					<ChildrenList>
+						<Action Name="" ID="{EBCF88C8-F78C-43D8-AE1F-B849CBC5AFC9}" ShortID="72414434">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="amb_room_interior_01" ID="{F785935B-7CC8-4CB8-B491-AE7531FB893F}" WorkUnitID="{76E8B1F7-8963-4328-B66E-087A10F64EE6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Footsteps" ID="{657936C6-D18B-4871-BBD3-C6D8D9D5A0F6}">
+					<ChildrenList>
+						<Action Name="" ID="{DF033CFB-516A-4A85-8663-18F578EA8EE4}" ShortID="784943539">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Footsteps_Ethereal" ID="{501CC030-EB90-4D99-81AE-7CB0D0F9A1D3}" WorkUnitID="{43C2252E-DCD3-44B3-A3E7-636268BFE8A3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{3F6162A5-1B36-4733-AA60-3985ED95EF5A}" ShortID="720923744">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Footsteps_Overlay" ID="{E2EE3DC1-99A6-4FF6-8E36-970B01C970F4}" WorkUnitID="{43C2252E-DCD3-44B3-A3E7-636268BFE8A3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_MX_Childhood" ID="{202C98C0-29C9-4172-BBD4-4878CFA0A5DB}">
+					<ChildrenList>
+						<Action Name="" ID="{3B5F5723-595D-4C45-A94D-797C1CF83796}" ShortID="518582944">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MX_Childhood" ID="{5C4FFEF8-8C5E-45F2-83E0-A6652EA0CAFE}" WorkUnitID="{5DDF8A02-71F0-4FB3-9BDC-786385EDC375}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Sparkler_Loop" ID="{E0A0AACC-E063-422A-9D75-320B6BCF21EE}">
+					<ChildrenList>
+						<Action Name="" ID="{79DFB60F-E620-4706-B4D1-BFABC3DA4ABB}" ShortID="886106131">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Sparkle" ID="{EF454E15-620B-491B-B858-5AEC866624B6}" WorkUnitID="{43C2252E-DCD3-44B3-A3E7-636268BFE8A3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

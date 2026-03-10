@@ -1,0 +1,94 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3667990691",
+    "Type": "Event",
+    "GUID": "{E0A0AACC-E063-422A-9D75-320B6BCF21EE}",
+    "Language": "SFX",
+    "Hash": "{9478EFD5-4479-86D2-591E-D4F25D89E9DB}",
+    "ObjectPath": "Play_Sparkler_Loop",
+    "ShortName": "Play_Sparkler_Loop",
+    "Path": "Event/Play_Sparkler_Loop.bnk",
+    "Media": [
+     {
+      "Id": "84853155",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "gp_sparkle_02.wav",
+      "Path": "Media/84853155.wem",
+      "CachePath": "3E/{3EDB34FF-47C8-AD5E-943E-C16F31000C2C}.wem"
+     },
+     {
+      "Id": "239558737",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "gp_sparkle_03.wav",
+      "Path": "Media/239558737.wem",
+      "CachePath": "71/{71D4E7C7-6042-F086-07A3-EF30CCBDF55D}.wem"
+     },
+     {
+      "Id": "382901388",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "gp_sparkle_04.wav",
+      "Path": "Media/382901388.wem",
+      "CachePath": "73/{73BF67B5-1852-ED32-1FE3-1012F8798F22}.wem"
+     },
+     {
+      "Id": "711784518",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "gp_sparkle_05.wav",
+      "Path": "Media/711784518.wem",
+      "CachePath": "7A/{7A558F95-35D8-F969-A98A-E765AE984960}.wem"
+     },
+     {
+      "Id": "860186292",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "gp_sparkle_01.wav",
+      "Path": "Media/860186292.wem",
+      "CachePath": "8A/{8AD89C13-2969-9E47-D2AA-9E626A0F9563}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3667990691",
+      "Name": "Play_Sparkler_Loop",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Sparkler_Loop",
+      "GUID": "{E0A0AACC-E063-422A-9D75-320B6BCF21EE}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "84853155"
+       },
+       {
+        "Id": "239558737"
+       },
+       {
+        "Id": "382901388"
+       },
+       {
+        "Id": "711784518"
+       },
+       {
+        "Id": "860186292"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{5F18102D-9DC8-4B0C-0FC9-0BFFD42A5305}"
+ }
+}
