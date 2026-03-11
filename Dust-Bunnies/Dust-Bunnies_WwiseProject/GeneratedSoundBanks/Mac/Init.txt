@@ -10,6 +10,7 @@ Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	348963605	Reverb			\Default Work Unit\Main Audio Bus\Reverb	
 
 Effect plug-ins	ID	Name	Type				Notes
+	914620648	Parametric EQ (Custom)	Wwise Parametric EQ			
 	2901166873	Footstep_Compressor	Wwise Compressor			
 	3216246379	Space_Dreaming	Wwise RoomVerb			
 

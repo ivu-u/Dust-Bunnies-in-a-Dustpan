@@ -60,6 +60,25 @@
 													</Reference>
 												</ReferenceList>
 											</EffectSlot>
+											<EffectSlot Name="" ID="{FFE7ECF6-C65D-4ABA-9D19-7A7E7B2E8541}" ShortID="1002230333">
+												<ReferenceList>
+													<Reference Name="Effect">
+														<Custom>
+															<Effect Name="Parametric EQ (Custom)" ID="{1ABA9249-DA21-497C-8680-5BA32C0E1CA2}" ShortID="914620648" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+																<PropertyList>
+																	<Property Name="FilterTypeBand3" Type="int32" Value="7"/>
+																	<Property Name="FrequencyBand1" Type="Real32" Value="69.82868"/>
+																	<Property Name="FrequencyBand3" Type="Real32" Value="7086.835"/>
+																	<Property Name="GainBand1" Type="Real32" Value="-9.230769"/>
+																	<Property Name="GainBand3" Type="Real32" Value="-0.1538462"/>
+																	<Property Name="OnOffBand3" Type="bool" Value="True"/>
+																	<Property Name="QFactorBand3" Type="Real32" Value="0.6750739"/>
+																</PropertyList>
+															</Effect>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
 										</ObjectList>
 									</ObjectLists>
 								</Bus>

@@ -65,7 +65,7 @@ public class LighterProgress : MonoBehaviour
     {
         if (isLit)
         {
-            SFXManager.PlaySFX(SFXManager.Events.SparklerLoop);
+            SFXManager.PlaySFX(SFXManager.Events.SparklerLoop, gameObject);
             // AkUnitySoundEngine.PostEvent("Play_Sparkler_Loop", gameObject);
             // sparklerLoop.Post(gameObject);
         }

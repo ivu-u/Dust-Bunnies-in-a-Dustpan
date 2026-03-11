@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{202C98C0-29C9-4172-BBD4-4878CFA0A5DB}",
     "Language": "SFX",
-    "Hash": "{5DCF8F9B-8FF9-E6ED-479D-1998222BA81C}",
+    "Hash": "{8368FFEC-E110-6B9B-D801-A0FF22A06FDF}",
     "ObjectPath": "Play_MX_Childhood",
     "ShortName": "Play_MX_Childhood",
     "Path": "Event/Play_MX_Childhood.bnk",
@@ -23,15 +23,6 @@
       "ShortName": "childhoodelodie.wav",
       "Path": "Media/369819652.wem",
       "CachePath": "93/{93B8DF02-90FD-8286-8E96-BA6C85F564BA}.wem"
-     },
-     {
-      "Id": "1026801295",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Hypermania but first time EDM.wav",
-      "Path": "Media/1026801295.wem",
-      "CachePath": "3E/{3E4538D0-0F5C-41E6-D3F3-983599D8FB41}.wem"
      }
     ],
     "Events": [
@@ -40,19 +31,17 @@
       "Name": "Play_MX_Childhood",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_MX_Childhood",
       "GUID": "{202C98C0-29C9-4172-BBD4-4878CFA0A5DB}",
+      "Color": "13",
       "DurationType": "Infinite",
       "MediaRefs": [
        {
         "Id": "369819652"
-       },
-       {
-        "Id": "1026801295"
        }
       ]
      }
     ]
    }
   ],
-  "FileHash": "{B1BDCCF2-9C02-FE42-AE17-202D0E5B3052}"
+  "FileHash": "{16E201D7-3EE4-63F3-CFFA-90A2A7D8C61D}"
  }
 }

@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{096D0650-03C3-4F63-AADF-D58D8406FAEB}",
     "Language": "SFX",
-    "Hash": "{C0D8FA5C-71B8-7C45-2733-F2A9CAEF89EC}",
+    "Hash": "{B50120A9-2240-2D5D-DA1C-8BE212B56504}",
     "ObjectPath": "Play_amb_room_interior_01",
     "ShortName": "Play_amb_room_interior_01",
     "Path": "Event/Play_amb_room_interior_01.bnk",
@@ -43,6 +43,7 @@
       "Name": "Play_amb_room_interior_01",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_amb_room_interior_01",
       "GUID": "{096D0650-03C3-4F63-AADF-D58D8406FAEB}",
+      "Color": "7",
       "DurationType": "OneShot",
       "DurationMin": "100.71448",
       "DurationMax": "100.71448",
@@ -62,6 +63,6 @@
     ]
    }
   ],
-  "FileHash": "{C84101BB-293A-E456-E50A-1615A59B99BE}"
+  "FileHash": "{E9DD49A8-D914-25B6-2AC3-BA80C9622F19}"
  }
 }

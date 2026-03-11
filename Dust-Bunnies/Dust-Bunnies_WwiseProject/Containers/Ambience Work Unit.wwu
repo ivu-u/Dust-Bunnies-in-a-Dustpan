@@ -2,11 +2,21 @@
 <WwiseDocument Type="WorkUnit" ID="{76E8B1F7-8963-4328-B66E-087A10F64EE6}" SchemaVersion="133">
 	<Containers>
 		<WorkUnit Name="Ambience Work Unit" ID="{76E8B1F7-8963-4328-B66E-087A10F64EE6}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="7"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
 			<ChildrenList>
 				<Folder Name="2D_Ambience" ID="{9CD05607-914D-46DB-9322-2F569E05D80F}" ShortID="464539709">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="7"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<Sound Name="amb_room_interior_01" ID="{F785935B-7CC8-4CB8-B491-AE7531FB893F}" ShortID="401083408">
 							<PropertyList>
+								<Property Name="Color" Type="int16" Value="7"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>-9</Value>
@@ -59,16 +69,22 @@
 					</ChildrenList>
 				</Folder>
 				<Folder Name="3D_Ambience" ID="{72BD4891-DEB2-4D8C-BB7B-88ED47603704}" ShortID="425530962">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="7"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<Sound Name="amb_room_street_01" ID="{7BB7B29C-4051-4412-82C4-3ABB4F2C2018}" ShortID="720474071">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="2"/>
 								<Property Name="AttenuationDistanceScaling" Type="Real32" Value="0.15"/>
+								<Property Name="Color" Type="int16" Value="7"/>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="50"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+								<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="59"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-6</Value>
+										<Value>-10</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>

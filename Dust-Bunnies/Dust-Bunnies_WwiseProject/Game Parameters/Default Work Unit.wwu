@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{1084BDEC-3701-4C54-B748-D1FB0B09AB5E}" SchemaVersion="133">
 	<GameParameters>
-		<WorkUnit Name="Default Work Unit" ID="{1084BDEC-3701-4C54-B748-D1FB0B09AB5E}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{1084BDEC-3701-4C54-B748-D1FB0B09AB5E}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="CandlePan" ID="{68674527-2BB2-460D-A004-80EF02439885}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="1"/>
+						<Property Name="Min" Type="Real64" Value="-1"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
 	</GameParameters>
 </WwiseDocument>

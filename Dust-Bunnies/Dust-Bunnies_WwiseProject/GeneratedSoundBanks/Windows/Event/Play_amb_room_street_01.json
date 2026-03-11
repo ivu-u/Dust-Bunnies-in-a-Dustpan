@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{E9C033D0-735B-4BA4-AEC0-F9C72C7BB21B}",
     "Language": "SFX",
-    "Hash": "{8EAE6135-85CF-6C1E-3269-FD1F84828407}",
+    "Hash": "{723E2129-E976-21B2-ACB1-9528E184AB19}",
     "ObjectPath": "Play_amb_room_street_01",
     "ShortName": "Play_amb_room_street_01",
     "Path": "Event/Play_amb_room_street_01.bnk",
@@ -43,6 +43,7 @@
       "Name": "Play_amb_room_street_01",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_amb_room_street_01",
       "GUID": "{E9C033D0-735B-4BA4-AEC0-F9C72C7BB21B}",
+      "Color": "7",
       "MaxAttenuation": "15.000001",
       "DurationType": "Infinite",
       "MediaRefs": [
@@ -61,6 +62,6 @@
     ]
    }
   ],
-  "FileHash": "{93113C27-5500-57FD-E750-140203197087}"
+  "FileHash": "{E9E64054-58FC-FB09-A895-2B90F0A5787F}"
  }
 }

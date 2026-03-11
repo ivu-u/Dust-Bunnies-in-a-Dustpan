@@ -26,6 +26,9 @@ public class CandleTarget : MonoBehaviour
 
         float offset = bigNoise * bigAmplitude + smallNoise * smallAmplitude;
 
+        float normalizedPan = (offset / (bigAmplitude + smallAmplitude)) * 0.5f;
+        AkUnitySoundEngine.SetRTPCValue("CandlePan", normalizedPan);
+
         transform.position = new Vector3(
             _baseX + offset,
             transform.position.y,
@@ -34,6 +37,6 @@ public class CandleTarget : MonoBehaviour
     }
     void Start()
     {
-        
+
     }
 }

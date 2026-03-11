@@ -2,9 +2,15 @@
 <WwiseDocument Type="WorkUnit" ID="{5DDF8A02-71F0-4FB3-9BDC-786385EDC375}" SchemaVersion="133">
 	<Containers>
 		<WorkUnit Name="Music Work Unit" ID="{5DDF8A02-71F0-4FB3-9BDC-786385EDC375}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="1"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
 			<ChildrenList>
 				<MusicPlaylistContainer Name="MX_Childhood" ID="{5C4FFEF8-8C5E-45F2-83E0-A6652EA0CAFE}" ShortID="46113976">
 					<PropertyList>
+						<Property Name="Color" Type="int16" Value="1"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>-4</Value>
@@ -16,7 +22,7 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B81D318-81E8-4EF5-A889-A2898F690ADA}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+							<ObjectRef Name="Music" ID="{775EDE36-C56F-4508-9C5A-ADAD9C4ED199}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
 						</Reference>
 						<Reference Name="PlaylistRoot">
 							<Custom>
@@ -31,7 +37,7 @@
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Segment">
-													<ObjectRef Name="childhoodelodie" ID="{2007BA8A-5006-43DD-B037-2B1BDF5AAD6A}" WorkUnitID="{5DDF8A02-71F0-4FB3-9BDC-786385EDC375}"/>
+													<ObjectRef Name="mus_childhood" ID="{2007BA8A-5006-43DD-B037-2B1BDF5AAD6A}" WorkUnitID="{5DDF8A02-71F0-4FB3-9BDC-786385EDC375}"/>
 												</Reference>
 											</ReferenceList>
 										</MusicPlaylistItem>
@@ -56,14 +62,11 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<MusicSegment Name="Hypermania but first time EDM" ID="{807BF7AE-8F3E-470D-B3FC-C83D18BAA50E}" ShortID="838062763">
+						<MusicSegment Name="mus_childhood" ID="{2007BA8A-5006-43DD-B037-2B1BDF5AAD6A}" ShortID="842301377">
 							<PropertyList>
-								<Property Name="EndPosition" Type="Real64" Value="64916.1458333333"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-7</Value>
-									</ValueList>
-								</Property>
+								<Property Name="Color" Type="int16" Value="1"/>
+								<Property Name="EndPosition" Type="Real64" Value="84226.0176511598"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -74,77 +77,11 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<MusicTrack Name="Hypermania but first time EDM" ID="{84454017-5C9B-4176-B1B8-8251516B90AB}" ShortID="1021646767">
-									<ReferenceList>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
-										</Reference>
-										<Reference Name="TransitionRoot">
-											<Custom>
-												<MusicTransition Name="Root" ID="{A02327E2-C904-40E8-A8DB-2907A4B8F763}">
-													<PropertyList>
-														<Property Name="IsFolder" Type="bool" Value="True"/>
-													</PropertyList>
-													<TransitionInfo/>
-												</MusicTransition>
-											</Custom>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Hypermania but first time EDM" ID="{3671BA6F-8D4C-43A3-A127-9EC3533FFAD3}">
-											<Language>SFX</Language>
-											<AudioFile>Hypermania but first time EDM.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="1026801295"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ObjectLists>
-										<ObjectList Name="Sequences">
-											<MusicTrackSequence Name="" ID="{349F1DF4-B6C6-4E42-A7C2-3B8FDB3976FB}">
-												<ObjectLists>
-													<ObjectList Name="Clips">
-														<MusicClip Name="Hypermania but first time EDM" ID="{D55685D5-2561-42BA-BD56-25D69BD94D60}">
-															<PropertyList>
-																<Property Name="EndTrimOffset" Type="Real64" Value="64916.1458333333"/>
-																<Property Name="FadeInMode" Type="int16" Value="0"/>
-																<Property Name="FadeOutMode" Type="int16" Value="0"/>
-															</PropertyList>
-															<AudioSourceRef Name="Hypermania but first time EDM" ID="{3671BA6F-8D4C-43A3-A127-9EC3533FFAD3}"/>
-														</MusicClip>
-													</ObjectList>
-												</ObjectLists>
-											</MusicTrackSequence>
-										</ObjectList>
-									</ObjectLists>
-								</MusicTrack>
-							</ChildrenList>
-							<ObjectLists>
-								<ObjectList Name="Cues">
-									<MusicCue Name="Entry Cue" ID="{171940F8-3ADD-4841-B109-84C661B405A4}"/>
-									<MusicCue Name="Exit Cue" ID="{D986C4FA-AEE9-4DED-AA1D-59960529347A}">
-										<PropertyList>
-											<Property Name="CueType" Type="int16" Value="1"/>
-											<Property Name="TimeMs" Type="Real64" Value="64916.1458333333"/>
-										</PropertyList>
-									</MusicCue>
-								</ObjectList>
-							</ObjectLists>
-						</MusicSegment>
-						<MusicSegment Name="childhoodelodie" ID="{2007BA8A-5006-43DD-B037-2B1BDF5AAD6A}" ShortID="842301377">
-							<PropertyList>
-								<Property Name="EndPosition" Type="Real64" Value="80522.2675736961"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B81D318-81E8-4EF5-A889-A2898F690ADA}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<MusicTrack Name="childhoodelodie" ID="{ACF34B40-283B-40F2-9D2F-AC1D18465336}" ShortID="900306602">
+								<MusicTrack Name="mus_childhood" ID="{ACF34B40-283B-40F2-9D2F-AC1D18465336}" ShortID="900306602">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="1"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
@@ -176,11 +113,70 @@
 													<ObjectList Name="Clips">
 														<MusicClip Name="childhoodelodie" ID="{8BE21E0F-5EDB-4906-851A-164BB0A89484}">
 															<PropertyList>
-																<Property Name="EndTrimOffset" Type="Real64" Value="80522.2675736961"/>
+																<Property Name="EndTrimOffset" Type="Real64" Value="80000"/>
 																<Property Name="FadeInMode" Type="int16" Value="0"/>
 																<Property Name="FadeOutMode" Type="int16" Value="0"/>
 															</PropertyList>
 															<AudioSourceRef Name="childhoodelodie" ID="{4093768F-8432-4AF8-A668-8067C3591876}"/>
+															<PropertyCurveList>
+																<PropertyCurve PropertyName="Highpass">
+																	<Curve Name="" ID="{C57C2376-7EE3-4CBB-8C87-EA616EC46488}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="1"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>0</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>80</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</PropertyCurve>
+																<PropertyCurve PropertyName="Lowpass">
+																	<Curve Name="" ID="{487B8B5F-74E7-474B-B32F-0B60D207F080}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="1"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>0</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>80</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</PropertyCurve>
+																<PropertyCurve PropertyName="Volume">
+																	<Curve Name="" ID="{92EC9BD6-AAB5-4906-AB10-470B435170BC}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>0</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>80</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</PropertyCurve>
+															</PropertyCurveList>
 														</MusicClip>
 													</ObjectList>
 												</ObjectLists>
@@ -195,7 +191,7 @@
 									<MusicCue Name="Exit Cue" ID="{97A30A8E-53CF-4755-824E-1B9B9C7091BF}">
 										<PropertyList>
 											<Property Name="CueType" Type="int16" Value="1"/>
-											<Property Name="TimeMs" Type="Real64" Value="80522.2675736961"/>
+											<Property Name="TimeMs" Type="Real64" Value="80000"/>
 										</PropertyList>
 									</MusicCue>
 								</ObjectList>

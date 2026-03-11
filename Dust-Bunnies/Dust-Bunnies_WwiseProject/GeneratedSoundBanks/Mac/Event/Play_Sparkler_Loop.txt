@@ -1,3 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	3667990691	Play_Sparkler_Loop			\Default Work Unit\Play_Sparkler_Loop	
 
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	2460978563	CandlePan			\Default Work Unit\CandlePan	
+

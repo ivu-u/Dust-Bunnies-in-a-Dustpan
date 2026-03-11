@@ -35,6 +35,11 @@ namespace AK
 
     } // namespace SWITCHES
 
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID CANDLEPAN = 2460978563U;
+    } // namespace GAME_PARAMETERS
+
     namespace BUSSES
     {
         static const AkUniqueID AMBIENCE = 85412153U;

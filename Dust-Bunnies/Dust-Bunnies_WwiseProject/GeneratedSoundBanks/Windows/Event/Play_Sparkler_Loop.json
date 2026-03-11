@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{E0A0AACC-E063-422A-9D75-320B6BCF21EE}",
     "Language": "SFX",
-    "Hash": "{9478EFD5-4479-86D2-591E-D4F25D89E9DB}",
+    "Hash": "{11D4F9EC-FA35-E005-EBBF-6303132B83BB}",
     "ObjectPath": "Play_Sparkler_Loop",
     "ShortName": "Play_Sparkler_Loop",
     "Path": "Event/Play_Sparkler_Loop.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "gp_sparkle_02.wav",
       "Path": "Media/84853155.wem",
-      "CachePath": "3E/{3EDB34FF-47C8-AD5E-943E-C16F31000C2C}.wem"
+      "CachePath": "22/{224DE3CA-9039-C1F6-0A0E-0C9B33875C47}.wem"
      },
      {
       "Id": "239558737",
@@ -58,7 +58,7 @@
       "Location": "Loose",
       "ShortName": "gp_sparkle_01.wav",
       "Path": "Media/860186292.wem",
-      "CachePath": "8A/{8AD89C13-2969-9E47-D2AA-9E626A0F9563}.wem"
+      "CachePath": "33/{3387991F-4E69-F359-9E5E-AFE1965462DC}.wem"
      }
     ],
     "Events": [
@@ -67,6 +67,7 @@
       "Name": "Play_Sparkler_Loop",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_Sparkler_Loop",
       "GUID": "{E0A0AACC-E063-422A-9D75-320B6BCF21EE}",
+      "Color": "4",
       "DurationType": "Infinite",
       "MediaRefs": [
        {
@@ -86,9 +87,17 @@
        }
       ]
      }
+    ],
+    "GameParameters": [
+     {
+      "Id": "2460978563",
+      "Name": "CandlePan",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\CandlePan",
+      "GUID": "{68674527-2BB2-460D-A004-80EF02439885}"
+     }
     ]
    }
   ],
-  "FileHash": "{5F18102D-9DC8-4B0C-0FC9-0BFFD42A5305}"
+  "FileHash": "{BE89B246-0EF5-E22E-B819-60DA7E2577DD}"
  }
 }

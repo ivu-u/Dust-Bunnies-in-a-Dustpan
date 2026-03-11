@@ -2,6 +2,10 @@
 <WwiseDocument Type="WorkUnit" ID="{43C2252E-DCD3-44B3-A3E7-636268BFE8A3}" SchemaVersion="133">
 	<Containers>
 		<WorkUnit Name="SFX Work Unit" ID="{43C2252E-DCD3-44B3-A3E7-636268BFE8A3}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="4"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
 			<ChildrenList>
 				<Folder Name="Footsteps" ID="{F8F909D9-A7D5-4B41-BA5E-9C5B332096C5}" ShortID="865206156">
 					<ChildrenList>
@@ -9,7 +13,7 @@
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-10</Value>
+										<Value>-12</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -323,7 +327,7 @@
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-4</Value>
+										<Value>-6</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -449,18 +453,20 @@
 				</Folder>
 				<RandomSequenceContainer Name="Sparkle" ID="{EF454E15-620B-491B-B858-5AEC866624B6}" ShortID="229252729">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
 						<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 						<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
 						<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="3"/>
 						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+						<Property Name="SpeakerPanning" Type="int16" Value="1"/>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B81D318-81E8-4EF5-A889-A2898F690ADA}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+							<ObjectRef Name="SFX" ID="{8D954BD1-37BF-4C6A-B849-5E1E2690394C}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -575,6 +581,14 @@
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
+					<PositioningInfo>
+						<Panner Name="" ID="{E4953705-28E0-4F5D-A7A5-075E5943ACBF}">
+							<PropertyList>
+								<Property Name="PanX" Type="Real64" Value="-1.11022302462516E-16"/>
+							</PropertyList>
+						</Panner>
+						<Position Name="" ID="{03132A11-DD69-43A0-97BE-6515051C51DF}"/>
+					</PositioningInfo>
 				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>
