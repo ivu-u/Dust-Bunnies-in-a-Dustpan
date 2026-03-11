@@ -22,6 +22,10 @@ public class Player : MonoBehaviour {
         get { return _playerInput.Default.Move.ReadValue<Vector2>();  }
     }
 
+    public Vector2 LookVector {
+        get { return _playerInput.Default.Look.ReadValue<Vector2>().normalized; }
+    }
+
     void Awake() {
         _playerInput = new();
         _playerInput.Enable();    // should probably move this at some point 

@@ -8,6 +8,7 @@ public class Interact : MonoBehaviour
 {
     [SerializeField] private Player player;
     [SerializeField] private Transform hold_point;
+    [SerializeField] private float moveTime = 1f;        // how long it takes to hold an object
 
     void Start() {
         player.OnInteractPerformed += OnInteract;
@@ -25,14 +26,23 @@ public class Interact : MonoBehaviour
             if (hit.transform.TryGetComponent(out Interactable interactable)) {
                 Debug.Log("wow. that's an interactable object.");
 
-                // lets do this scuff first
-                Transform t = interactable.transform;
-                Tween.Position(t, hold_point.position, 1f, Ease.InSine);
+                
+                PickUpObj(interactable);
 
                 // if player successfully interacts with something --> switch control action maps
                 player.ActivateInteractInputs();    // TODO: change
             }
         }
+    }
+
+    /// <summary>
+    /// First time you interact the player picks up the obj
+    /// </summary>
+    private void PickUpObj(Interactable obj) {
+        // lets do this scuff first
+        Transform t = obj.transform;
+        Tween.Position(t, hold_point.position, 1f, Ease.InSine);    // move to player hold point
+        //Tween.EulerAngles(t, t.rotation, t.)
     }
 
     private void OnRotate(float val) {

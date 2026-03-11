@@ -6,6 +6,7 @@ using UnityEngine;
 /// </summary>
 public class PlayerCamera : MonoBehaviour
 {
+    [SerializeField] private Player player;
     [SerializeField] private Transform camHead;
     [SerializeField] private Camera playerCamera;
 
@@ -61,7 +62,7 @@ public class PlayerCamera : MonoBehaviour
 
     private void CameraMovement() {
         // Rotate player left/right with mouse X movement, with smoothing
-        currRotationSpeedZ = Mathf.Lerp(currRotationSpeedZ, Input.GetAxis("Mouse X") * rotationSpeed, Time.deltaTime * lookSmoothing);
+        currRotationSpeedZ = Mathf.Lerp(currRotationSpeedZ, player.LookVector.x * rotationSpeed, Time.deltaTime * lookSmoothing);
         transform.Rotate(Vector3.up * currRotationSpeedZ);
 
         // Manual Cam Controls
@@ -99,7 +100,7 @@ public class PlayerCamera : MonoBehaviour
     // Called on Trigger while player is in the zone and on exit
     public void CollideWithDeskOverlookZone(DeskOverlookZone zone, bool exiting) {
         if (currentCamState == CamState.LockedOverhead) {
-            mouseYIntegrator += Time.deltaTime * Input.GetAxis("Mouse Y");
+            mouseYIntegrator += Time.deltaTime * player.LookVector.y;
             if (mouseYIntegrator > overheadExitMouseYThreshold
                     || !AngleInRange(transform.localEulerAngles.y, zone.triggerDirectionMinAngle, zone.triggerDirectionMaxAngle)
                     || exiting) {
@@ -118,7 +119,7 @@ public class PlayerCamera : MonoBehaviour
 
     private void CamFree() {
         Vector3 e = camHead.localEulerAngles;
-        currRotationSpeedX = Mathf.Lerp(currRotationSpeedX, Input.GetAxis("Mouse Y") * rotationSpeed, Time.deltaTime * lookSmoothing);
+        currRotationSpeedX = Mathf.Lerp(currRotationSpeedX, player.LookVector.y * rotationSpeed, Time.deltaTime * lookSmoothing);
         e.x -= currRotationSpeedX;
         e.x = RestrictAngle(e.x, -85f, 85f);
         camHead.localEulerAngles = e;
