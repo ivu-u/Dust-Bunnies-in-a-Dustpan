@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{3609F3D3-1CB7-4690-BC0E-EAF3AF14A231}" SchemaVersion="133">
 	<MixingSessions>
-		<WorkUnit Name="Default Work Unit" ID="{3609F3D3-1CB7-4690-BC0E-EAF3AF14A231}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{3609F3D3-1CB7-4690-BC0E-EAF3AF14A231}" PersistMode="Standalone">
+			<ChildrenList>
+				<MixingSession Name="New Mixing Session" ID="{60CF7167-5C04-4051-B8A9-D4AD594AC838}">
+					<ObjectList>
+						<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+						<ObjectRef Name="Ambience" ID="{81889309-9F76-43EA-A22A-73DFD1D76715}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+						<ObjectRef Name="Music" ID="{775EDE36-C56F-4508-9C5A-ADAD9C4ED199}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+						<ObjectRef Name="SFX" ID="{8D954BD1-37BF-4C6A-B849-5E1E2690394C}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+						<ObjectRef Name="Footstep" ID="{1657EC3F-4A0A-467A-8030-25A934241F4E}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+						<ObjectRef Name="FootstepEthereal" ID="{20ECAD15-14BE-44C0-B5EB-36CB1EA82D7F}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+						<ObjectRef Name="Reverb" ID="{E90EFC91-CB5A-4F18-A18C-F6828E5879E6}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+					</ObjectList>
+				</MixingSession>
+			</ChildrenList>
+		</WorkUnit>
 	</MixingSessions>
 </WwiseDocument>

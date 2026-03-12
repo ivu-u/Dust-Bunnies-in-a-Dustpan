@@ -10,11 +10,21 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{603B68C0-914F-ECAD-6F3B-18FE939F09C1}",
+    "Hash": "{A37E57B3-ED12-ECB4-5289-EB85E4A65A1D}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
     "Plugins": {
+     "Custom": [
+      {
+       "Id": "914620648",
+       "Name": "Parametric EQ (Custom)",
+       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\SFX\\Footstep\\[Effect Slot [1]: (Parametric EQ)]\\Parametric EQ (Custom)",
+       "GUID": "{1ABA9249-DA21-497C-8680-5BA32C0E1CA2}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      }
+     ],
      "ShareSets": [
       {
        "Id": "2901166873",
@@ -84,6 +94,11 @@
       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\SFX\\Footstep",
       "GUID": "{1657EC3F-4A0A-467A-8030-25A934241F4E}",
       "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "914620648"
+        }
+       ],
        "ShareSets": [
         {
          "Id": "2901166873"
@@ -119,6 +134,14 @@
       }
      }
     ],
+    "GameParameters": [
+     {
+      "Id": "2460978563",
+      "Name": "CandlePan",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\CandlePan",
+      "GUID": "{68674527-2BB2-460D-A004-80EF02439885}"
+     }
+    ],
     "SwitchGroups": [
      {
       "Id": "3989786198",
@@ -143,6 +166,6 @@
     ]
    }
   ],
-  "FileHash": "{B285F0F4-E163-30BC-1AB4-D9F78DE323D3}"
+  "FileHash": "{0DDA1F84-9F1F-3891-482F-6BFAB877E147}"
  }
 }

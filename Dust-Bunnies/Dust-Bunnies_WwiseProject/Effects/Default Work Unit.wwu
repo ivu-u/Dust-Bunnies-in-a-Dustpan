@@ -9,7 +9,7 @@
 						<Property Name="AttackTime" Type="Real32" Value="0"/>
 						<Property Name="Ratio" Type="Real32" Value="2.5"/>
 						<Property Name="ReleaseTime" Type="Real32" Value="0.47"/>
-						<Property Name="Threshold" Type="Real32" Value="-44.6"/>
+						<Property Name="Threshold" Type="Real32" Value="-47.6"/>
 					</PropertyList>
 				</Effect>
 			</ChildrenList>
