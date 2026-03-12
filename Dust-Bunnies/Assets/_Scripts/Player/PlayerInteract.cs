@@ -22,7 +22,18 @@ public class Interact : MonoBehaviour
         Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit)) {
-            if (hit.transform.TryGetComponent(out Interactable interactable)) {
+
+            // TODO: Create Interact() base func for Interactables that will be overriden for openable interactables
+            if (hit.transform.TryGetComponent(out OpenableInteractables oi)) {
+                Debug.Log("oh this can be opened.");
+
+                // Change state of openable object
+                // if player successfully interacts with openable object --> do NOT deactiveate input actions
+                Transform t = oi.transform;
+                oi.ChangeState();
+            }
+
+            else if (hit.transform.TryGetComponent(out Interactable interactable)) {
                 Debug.Log("wow. that's an interactable object.");
 
                 // lets do this scuff first
