@@ -1,6 +1,7 @@
 using System;
 using PrimeTween;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Player Motor
@@ -14,7 +15,10 @@ public class PlayerMovement : MonoBehaviour
     float stepTimer;
     [SerializeField] float stepInterval = 0.1f;
 
-    public void Move(Vector2 inputVector) {
+
+
+    public void Move(Vector2 inputVector)
+    {
         // TODO: update is moving here
         //if (inputVector.magnitude <= 0) return;
 
@@ -26,9 +30,12 @@ public class PlayerMovement : MonoBehaviour
         characterController.SimpleMove(move * speed);
 
         // TODO: update this SFX system
-        if (inputVector.magnitude > 0) {
+        if (inputVector.magnitude > 0 && SceneManager.GetActiveScene().buildIndex != 2)
+        {
             SetMovementState(true);
-        } else {
+        }
+        else
+        {
             SetMovementState(false);    // TODO: bad
         }
     }
