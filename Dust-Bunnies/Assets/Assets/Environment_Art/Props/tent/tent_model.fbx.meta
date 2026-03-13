@@ -9,11 +9,6 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: drapes.001
     second: {fileID: 2100000, guid: 005576c3452f2054abb9c110fc3a96dd, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: outline_shader.001
-    second: {fileID: 2100000, guid: 5ad9ea5c94c803149b43fc7017e5b93d, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

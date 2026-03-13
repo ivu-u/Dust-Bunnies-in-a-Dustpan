@@ -91,9 +91,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 668a555ab15d809469a6fcebd89bee0b, type: 3}
   m_Name: God Rays
   m_EditorClassIdentifier: 
-  m_Active: 0
+  m_Active: 1
   settings:
-    downsampling: 2
+    downsampling: 1
     stage: 2
     intensity: 2.1
     scattering: -0.02
