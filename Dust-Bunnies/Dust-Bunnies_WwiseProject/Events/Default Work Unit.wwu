@@ -64,7 +64,7 @@
 						<Action Name="" ID="{3B5F5723-595D-4C45-A94D-797C1CF83796}" ShortID="518582944">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="MX_Childhood" ID="{5C4FFEF8-8C5E-45F2-83E0-A6652EA0CAFE}" WorkUnitID="{5DDF8A02-71F0-4FB3-9BDC-786385EDC375}"/>
+									<ObjectRef Name="Music" ID="{5C4B9A20-4C83-4BC7-AD1A-E67355284D6E}" WorkUnitID="{5DDF8A02-71F0-4FB3-9BDC-786385EDC375}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -80,6 +80,17 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Sparkle" ID="{EF454E15-620B-491B-B858-5AEC866624B6}" WorkUnitID="{43C2252E-DCD3-44B3-A3E7-636268BFE8A3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_cici_theme" ID="{52A49917-B1F3-4356-A11D-D476553584CC}">
+					<ChildrenList>
+						<Action Name="" ID="{D6A2948D-D949-46E3-92B8-50516E58E5BF}" ShortID="989829623">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="cici_theme" ID="{C1917D3E-F5E0-4CF1-B4DA-B0F4F17DCD1F}" WorkUnitID="{5DDF8A02-71F0-4FB3-9BDC-786385EDC375}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

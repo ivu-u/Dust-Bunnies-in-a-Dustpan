@@ -10,18 +10,22 @@ public class SceneFader : MonoBehaviour
     [SerializeField] private AnimationCurve curve;
     [SerializeField] private float fadeTime = 1f;
 
-    private void Start() {
+    private void Start()
+    {
         StartCoroutine(FadeIn());
     }
 
-    public void FadeTo(int index) {
+    public void FadeTo(int index)
+    {
         StartCoroutine(FadeOut(index));
     }
 
-    IEnumerator FadeIn() {
+    IEnumerator FadeIn()
+    {
         float t = fadeTime;
 
-        while (t > 0) {
+        while (t > 0)
+        {
             t -= Time.deltaTime;
             float a = curve.Evaluate(t);
             img.color = new Color(0f, 0f, 0f, t);
@@ -29,15 +33,37 @@ public class SceneFader : MonoBehaviour
         }
     }
 
-    IEnumerator FadeOut(int index) {
+    IEnumerator FadeOut(int index)
+    {
         float t = 0f;    // time
 
-        while (t < fadeTime) {
+        while (t < fadeTime)
+        {
             t += Time.deltaTime;
             float a = curve.Evaluate(t);
             img.color = new Color(0f, 0f, 0f, t);
             yield return 0;         // wait a frame and then continue
         }
+        switch (index)
+        {
+            case 0:
+                AkUnitySoundEngine.SetState("Scene", "Mirror");
+                break;
+
+            case 1:
+                AkUnitySoundEngine.SetState("Scene", "Key1");
+                break;
+
+            case 2:
+                AkUnitySoundEngine.SetState("Scene", "Key2");
+                break;
+
+            case 3:
+                AkUnitySoundEngine.SetState("Scene", "Key3");
+                break;
+        }
         SceneManager.LoadScene(index);
     }
+
+
 }

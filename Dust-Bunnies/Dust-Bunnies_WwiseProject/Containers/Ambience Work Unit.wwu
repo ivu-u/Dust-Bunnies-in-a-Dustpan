@@ -66,6 +66,66 @@
 								<ActiveSource Name="amb_room_interior_01" ID="{EE49F0C4-F0B3-41A9-AFD5-70D991E4362F}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="amb_static" ID="{0F8B6FEF-EF91-48AC-B2FB-260BEF6BC22B}" ShortID="740505246">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{3B81D318-81E8-4EF5-A889-A2898F690ADA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Ambience" ID="{81889309-9F76-43EA-A22A-73DFD1D76715}" WorkUnitID="{398ACA09-BA55-4FBF-B4AE-720DF1701F87}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ES_Communications, Static, Analog, Radio, Buzz, Noise, SW - Epidemic Sound" ID="{BBF94CD7-F7F0-4A3D-8E17-FD3152762575}">
+									<PropertyList>
+										<Property Name="LoopEnd" Type="Real64" Value="33.9444497613694"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="1.60585505207318"/>
+										<Property Name="TrimEnd" Type="Real64" Value="34.1105726977907"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>ES_Communications, Static, Analog, Radio, Buzz, Noise, SW - Epidemic Sound.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="818022031"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<EffectSlot Name="" ID="{0594FAF7-C9DD-4DF3-9F2F-79260F781860}" ShortID="841263756">
+										<ReferenceList>
+											<Reference Name="Effect" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+												<ObjectRef Name="Attack_Remover" ID="{174E7B9A-A16F-4CA7-86D0-530212B5A6AA}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+											</Reference>
+										</ReferenceList>
+									</EffectSlot>
+									<EffectSlot Name="" ID="{01DD2995-5670-4960-A229-A25DF6F9C96E}" ShortID="57270703">
+										<ReferenceList>
+											<Reference Name="Effect">
+												<Custom>
+													<Effect Name="Parametric EQ (Custom)" ID="{A30FC301-87ED-4D1D-992A-1FCD657516E8}" ShortID="422782713" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+														<PropertyList>
+															<Property Name="FilterTypeBand1" Type="int32" Value="8"/>
+															<Property Name="FrequencyBand1" Type="Real32" Value="63.33909"/>
+															<Property Name="FrequencyBand3" Type="Real32" Value="93.56638"/>
+															<Property Name="GainBand3" Type="Real32" Value="-8.153846"/>
+															<Property Name="OnOffBand3" Type="bool" Value="True"/>
+															<Property Name="QFactorBand1" Type="Real32" Value="0.8620505"/>
+														</PropertyList>
+													</Effect>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</EffectSlot>
+								</ObjectList>
+							</ObjectLists>
+							<ActiveSourceList>
+								<ActiveSource Name="ES_Communications, Static, Analog, Radio, Buzz, Noise, SW - Epidemic Sound" ID="{BBF94CD7-F7F0-4A3D-8E17-FD3152762575}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="3D_Ambience" ID="{72BD4891-DEB2-4D8C-BB7B-88ED47603704}" ShortID="425530962">

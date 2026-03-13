@@ -1,3 +1,13 @@
 Event	ID	Name			Wwise Object Path	Notes
 	2272849752	Play_MX_Childhood			\Default Work Unit\Play_MX_Childhood	
 
+State Group	ID	Name			Wwise Object Path	Notes
+	1926883983	Scene			\Default Work Unit\Scene	
+
+State	ID	Name	State Group			Notes
+	748895195	None	Scene			
+	2039020852	Mirror	Scene			
+	2215982740	Key2	Scene			
+	2215982741	Key3	Scene			
+	2215982743	Key1	Scene			
+

@@ -200,7 +200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterController: {fileID: 8189818858799356806}
   speed: 2
-  stepInterval: 0.1
+  stepInterval: 1
 --- !u!114 &2082595037845713553
 MonoBehaviour:
   m_ObjectHideFlags: 0

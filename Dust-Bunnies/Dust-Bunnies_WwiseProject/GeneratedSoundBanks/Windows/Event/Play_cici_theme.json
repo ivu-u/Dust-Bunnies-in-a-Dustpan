@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2223146148",
+    "Type": "Event",
+    "GUID": "{52A49917-B1F3-4356-A11D-D476553584CC}",
+    "Language": "SFX",
+    "Hash": "{664D5AB0-24D7-08A9-0EA8-01D853EFB117}",
+    "ObjectPath": "Play_cici_theme",
+    "ShortName": "Play_cici_theme",
+    "Path": "Event/Play_cici_theme.bnk",
+    "Media": [
+     {
+      "Id": "626918522",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "cici_theme.wav",
+      "Path": "Media/626918522.wem",
+      "CachePath": "0A/{0A35DA2F-E43B-0315-3F16-6B35F0E5302D}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2223146148",
+      "Name": "Play_cici_theme",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_cici_theme",
+      "GUID": "{52A49917-B1F3-4356-A11D-D476553584CC}",
+      "DurationType": "OneShot",
+      "DurationMin": "5.5468707",
+      "DurationMax": "5.5468707",
+      "MediaRefs": [
+       {
+        "Id": "626918522"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{D27F6915-E847-8409-6680-8E57BCAE6902}"
+ }
+}
