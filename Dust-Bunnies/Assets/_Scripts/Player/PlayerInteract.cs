@@ -9,6 +9,7 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField] private Transform playerCam;
     [SerializeField] private Transform hold_point;
     [SerializeField] private float moveTime = 1f;        // how long it takes to hold an object
+    [SerializeField] private float rotationSpeed = 1f;
 
     private Interactable obj;   // what was picked up
     
@@ -54,7 +55,9 @@ public class PlayerInteract : MonoBehaviour
         Tween.Rotation(t, obj.StartRot, moveTime, Ease.OutSine);
     }
 
-    private void OnRotate(float val) {
-        
+    public void Rotate(Vector2 rot) {
+        Transform t = obj.transform;
+        t.Rotate(rot.x * rotationSpeed * playerCam.up, Space.Self);
+        t.Rotate(-rot.y * rotationSpeed * Vector3.right, Space.Self);
     }
 }

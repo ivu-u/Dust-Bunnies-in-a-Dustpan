@@ -11,22 +11,25 @@ public class InteractState : PlayerState
         base.Enter();
 
         input.SwitchMaps(input.Maps.Interact);
-        input.OnRotatePerformed += RotateObject;
+        input.OnInteractExit += ExitInteract;
 
         player.Interact.PickUpObj();
     }
 
     public override void Exit() {
+        input.OnInteractExit -= ExitInteract;
+
+
         base.Exit();
-        input.OnRotatePerformed -= RotateObject;
     }
 
     public override void Update() {
         base.Update();
+        player.Interact.Rotate(input.Rotate);
     }
 
-
-    private void RotateObject(float value) {
-
+    private void ExitInteract() {
+        player.Interact.PutDownObj();
+        player.SwitchState(new DefaultState(player, input));
     }
 }
