@@ -15,10 +15,29 @@ namespace AK
     {
         static const AkUniqueID PLAY_AMB_ROOM_INTERIOR_01 = 3152322375U;
         static const AkUniqueID PLAY_AMB_ROOM_STREET_01 = 2134236060U;
+        static const AkUniqueID PLAY_CICI_THEME = 2223146148U;
         static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
         static const AkUniqueID PLAY_MX_CHILDHOOD = 2272849752U;
         static const AkUniqueID PLAY_SPARKLER_LOOP = 3667990691U;
     } // namespace EVENTS
+
+    namespace STATES
+    {
+        namespace SCENE
+        {
+            static const AkUniqueID GROUP = 1926883983U;
+
+            namespace STATE
+            {
+                static const AkUniqueID KEY1 = 2215982743U;
+                static const AkUniqueID KEY2 = 2215982740U;
+                static const AkUniqueID KEY3 = 2215982741U;
+                static const AkUniqueID MIRROR = 2039020852U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace SCENE
+
+    } // namespace STATES
 
     namespace SWITCHES
     {

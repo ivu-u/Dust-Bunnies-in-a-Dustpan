@@ -10,11 +10,29 @@
     "Type": "Event",
     "GUID": "{202C98C0-29C9-4172-BBD4-4878CFA0A5DB}",
     "Language": "SFX",
-    "Hash": "{8368FFEC-E110-6B9B-D801-A0FF22A06FDF}",
+    "Hash": "{B3F0E84C-B934-8583-D14C-5A3FD27614F5}",
     "ObjectPath": "Play_MX_Childhood",
     "ShortName": "Play_MX_Childhood",
     "Path": "Event/Play_MX_Childhood.bnk",
     "Media": [
+     {
+      "Id": "25738766",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "idea2.wav",
+      "Path": "Media/25738766.wem",
+      "CachePath": "7E/{7EEBB8A1-EF77-729F-7D2B-2E8828E593B0}.wem"
+     },
+     {
+      "Id": "347079048",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "dust3(1).wav",
+      "Path": "Media/347079048.wem",
+      "CachePath": "CB/{CBD9F35D-0622-8D4D-D492-88601606F1D0}.wem"
+     },
      {
       "Id": "369819652",
       "Language": "SFX",
@@ -23,6 +41,15 @@
       "ShortName": "childhoodelodie.wav",
       "Path": "Media/369819652.wem",
       "CachePath": "93/{93B8DF02-90FD-8286-8E96-BA6C85F564BA}.wem"
+     },
+     {
+      "Id": "1056537027",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "ES_Communications, Static, Analog, Radio, Buzz, Noise, SW - Epidemic Sound.wav",
+      "Path": "Media/1056537027.wem",
+      "CachePath": "13/{13EB850B-5CCF-7E7C-AEA6-AAD94720C928}.wem"
      }
     ],
     "Events": [
@@ -33,15 +60,104 @@
       "GUID": "{202C98C0-29C9-4172-BBD4-4878CFA0A5DB}",
       "Color": "13",
       "DurationType": "Infinite",
-      "MediaRefs": [
+      "SwitchContainers": [
        {
-        "Id": "369819652"
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "1926883983",
+         "Id": "2215982743",
+         "GUID": "{46832612-5A3D-444B-B82C-5BFBA296169F}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "369819652"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "1926883983",
+         "Id": "2215982740",
+         "GUID": "{612E8A23-6F89-410B-AC5E-A361DA2F94F1}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "1056537027"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "1926883983",
+         "Id": "2215982741",
+         "GUID": "{18EC95FA-CA7E-4786-8045-181894FD06F3}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "25738766"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "1926883983",
+         "Id": "2039020852",
+         "GUID": "{ABEBC7D1-1837-4AB9-A416-C9E9978EABAE}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "347079048"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "StateGroups": [
+     {
+      "Id": "1926883983",
+      "Name": "Scene",
+      "ObjectPath": "\\States\\Default Work Unit\\Scene",
+      "GUID": "{1A0AE10D-819B-4A64-B3EF-1520E4882B35}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\Scene\\None",
+        "GUID": "{02F067A0-7CB0-4A49-B405-334823B1C81D}"
+       },
+       {
+        "Id": "2039020852",
+        "Name": "Mirror",
+        "ObjectPath": "\\States\\Default Work Unit\\Scene\\Mirror",
+        "GUID": "{ABEBC7D1-1837-4AB9-A416-C9E9978EABAE}"
+       },
+       {
+        "Id": "2215982740",
+        "Name": "Key2",
+        "ObjectPath": "\\States\\Default Work Unit\\Scene\\Key2",
+        "GUID": "{612E8A23-6F89-410B-AC5E-A361DA2F94F1}"
+       },
+       {
+        "Id": "2215982741",
+        "Name": "Key3",
+        "ObjectPath": "\\States\\Default Work Unit\\Scene\\Key3",
+        "GUID": "{18EC95FA-CA7E-4786-8045-181894FD06F3}"
+       },
+       {
+        "Id": "2215982743",
+        "Name": "Key1",
+        "ObjectPath": "\\States\\Default Work Unit\\Scene\\Key1",
+        "GUID": "{46832612-5A3D-444B-B82C-5BFBA296169F}"
        }
       ]
      }
     ]
    }
   ],
-  "FileHash": "{16E201D7-3EE4-63F3-CFFA-90A2A7D8C61D}"
+  "FileHash": "{606F31DB-3C9A-E1A7-CA8F-3C4B7775DEE1}"
  }
 }
