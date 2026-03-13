@@ -19,11 +19,13 @@ public class DefaultState : PlayerState
         Cursor.lockState = CursorLockMode.Locked;
     }
 
+    // TODO: this is called by PlayerController.SwitchState()
+    // but i don't think that's clean
     public override void Exit() {
-        base.Exit();
-
         input.OnInteractPerformed -= OnInteract;
         input.OnNextScenePerformed -= NextScene;
+
+        base.Exit();
     }
 
     public override void Update() {
@@ -37,13 +39,11 @@ public class DefaultState : PlayerState
         Interactable obj = player.Interact.TryPickUp();
         if (obj == null) return;
 
-
         player.SwitchState(new InteractState(player, input));
     }
 
     // DEBUG
     private void NextScene() {
-
         input.Maps.Disable();           // TODO: bad practice. should not have direct access
         player.Debug.NextScene();
     }
