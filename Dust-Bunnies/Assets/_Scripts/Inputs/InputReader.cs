@@ -12,12 +12,12 @@ public class InputReader : MonoBehaviour
     // CONTINUOUS INPUTS    ---
     public Vector2 Move => _inputs.Default.Move.ReadValue<Vector2>();
     public Vector2 Look =>  _inputs.Default.Look.ReadValue<Vector2>();
+    public Vector2 Rotate => _inputs.Interact.Rotate.ReadValue<Vector2>();
     // sprint
 
     // EVENTS   ---
     public event System.Action OnInteractPerformed;
     public event System.Action OnInteractExit;
-    public event System.Action<float> OnRotatePerformed;
 
     // DEBUG
     public event System.Action OnNextScenePerformed;
@@ -33,7 +33,6 @@ public class InputReader : MonoBehaviour
     void OnEnable() {
         //_inputs.Enable();
         _inputs.Default.Interact.performed += InteractPerformed;
-        _inputs.Interact.Rotate.performed += RotatePerformed;
         _inputs.Interact.Return.performed += InteractExitPerformed;
 
         // DEBUG
@@ -42,7 +41,6 @@ public class InputReader : MonoBehaviour
 
     void OnDisable() {
         _inputs.Default.Interact.performed -= InteractPerformed;
-        _inputs.Interact.Rotate.performed -= RotatePerformed;
         _inputs.Interact.Return.performed -= InteractExitPerformed;
 
         // DEBUG
@@ -68,9 +66,6 @@ public class InputReader : MonoBehaviour
 
     private void InteractPerformed(InputAction.CallbackContext _) => 
         OnInteractPerformed?.Invoke();
-
-    private void RotatePerformed(InputAction.CallbackContext context) =>
-        OnRotatePerformed?.Invoke(context.ReadValue<float>());
 
     private void InteractExitPerformed(InputAction.CallbackContext _) =>
         OnInteractExit?.Invoke();

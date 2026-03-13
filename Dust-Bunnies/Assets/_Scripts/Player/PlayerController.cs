@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
         SwitchState(new DefaultState(this, input));
     }
 
+    // TODO: check this later
     public void SwitchState(PlayerState newState) {
         _currentState?.Exit();  // cleanup old state
         _currentState = newState;
