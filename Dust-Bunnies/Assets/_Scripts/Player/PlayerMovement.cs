@@ -2,27 +2,19 @@ using System;
 using PrimeTween;
 using UnityEngine;
 
+/// <summary>
+/// Player Motor
+/// </summary>
 public class PlayerMovement : MonoBehaviour
 {
-
-
-    [SerializeField] private Player player;
     [SerializeField] private CharacterController characterController;
-    //[SerializeField] private Transform camHead;
-    //[SerializeField] private Camera playerCamera;
     [SerializeField] private float speed = 10f;
 
     [Header("Audio")]
     float stepTimer;
     [SerializeField] float stepInterval = 0.1f;
 
-
-    // Update is called once per frame
-    void Update() {
-        Move(player.MovementVector);
-    }
-
-    private void Move(Vector2 inputVector) {
+    public void Move(Vector2 inputVector) {
         // TODO: update is moving here
         //if (inputVector.magnitude <= 0) return;
 
@@ -35,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    public void SetMovementState(bool moving)
+    public void SetMovementState(bool moving)   // TODO: Implement this into new system
     {
         if (!moving)
         {

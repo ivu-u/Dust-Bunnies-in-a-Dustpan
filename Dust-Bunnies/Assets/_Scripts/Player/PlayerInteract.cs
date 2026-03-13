@@ -4,45 +4,54 @@ using PrimeTween;
 /// <summary>
 /// Handles player interaction with Interactables (objects)
 /// </summary>
-public class Interact : MonoBehaviour
+public class PlayerInteract : MonoBehaviour
 {
-    [SerializeField] private Player player;
+    [SerializeField] private Transform playerCam;
     [SerializeField] private Transform hold_point;
     [SerializeField] private float moveTime = 1f;        // how long it takes to hold an object
 
-    void Start() {
-        player.OnInteractPerformed += OnInteract;
-        player.OnRotatePerformed += OnRotate;
-    }
-
+    private Interactable obj;   // what was picked up
+    
     /// <summary>
     /// Called when the player hits the interact button
     /// </summary>
-    private void OnInteract() {
+    public Interactable TryPickUp() {
         // shoot ray from the center of camera
         Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit)) {
             if (hit.transform.TryGetComponent(out Interactable interactable)) {
-                Debug.Log("wow. that's an interactable object.");
-
-                
-                PickUpObj(interactable);
-
-                // if player successfully interacts with something --> switch control action maps
-                player.ActivateInteractInputs();    // TODO: change
+                obj = interactable;
+                return interactable;
             }
         }
+        return null;
     }
 
     /// <summary>
     /// First time you interact the player picks up the obj
     /// </summary>
-    private void PickUpObj(Interactable obj) {
+    public void PickUpObj() {
+        if (obj == null) { Debug.Log("No object to pick up??"); return; }
+
         // lets do this scuff first
         Transform t = obj.transform;
-        Tween.Position(t, hold_point.position, 1f, Ease.InSine);    // move to player hold point
+        Tween.Position(t, hold_point.position, moveTime, Ease.InSine);    // move to player hold point
+
+        // calculate rotation to point towards player cam
+        Quaternion rot = Quaternion.LookRotation(playerCam.transform.position - t.position, Vector3.up);
+        Tween.Rotation(t, rot, moveTime, Ease.InSine);
         //Tween.EulerAngles(t, t.rotation, t.)
+    }
+
+    public void PutDownObj() {
+        if (obj == null) { Debug.Log("Not holding an object???"); return; }
+
+        Transform t = obj.transform;
+        Tween.Position(t, obj.StartPos, moveTime, Ease.OutSine);
+
+        //Quaternion rot = Quaternion.LookRotation()
+        Tween.Rotation(t, obj.StartRot, moveTime, Ease.OutSine);
     }
 
     private void OnRotate(float val) {

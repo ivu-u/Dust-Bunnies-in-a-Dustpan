@@ -6,7 +6,16 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Scenes/Final_Scenes/Starting_Room.unity
+    guid: 999f73479289f234a8b0818d1afc8559
+  - enabled: 1
+    path: Assets/Scenes/Final_Scenes/Key_1.unity
+    guid: aecb06ab6cd99f941aa96f52b8868119
+  - enabled: 1
+    path: Assets/Scenes/Final_Scenes/Key_2.unity
+    guid: 3a6366f1a4ca5d64ab634f8120fe08b7
+  - enabled: 1
+    path: Assets/Scenes/Final_Scenes/Key_3.unity
+    guid: 44de5ed4c1a2e8643bd02dbb66bda7cf
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

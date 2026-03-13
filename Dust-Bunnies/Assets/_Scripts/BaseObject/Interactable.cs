@@ -6,14 +6,14 @@ using UnityEngine;
 public class Interactable : MonoBehaviour
 {
     private Vector3 _startPos;  // store initial start pos to return back to
-    private Transform _t;
+    private Quaternion _startRot;
+
+    public Vector3 StartPos => _startPos;
+    public Quaternion StartRot => _startRot;
 
     void Start() {
-        _t = transform;
         _startPos = transform.position;
+        _startRot = transform.rotation;
     }
 
-    public void Rotate() {
-
-    }
 }
