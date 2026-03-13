@@ -18,13 +18,13 @@ MonoBehaviour:
     m_Value: 0
   threshold:
     m_OverrideState: 1
-    m_Value: 0.62
+    m_Value: 0.32
   intensity:
     m_OverrideState: 1
     m_Value: 0.2
   scatter:
     m_OverrideState: 1
-    m_Value: 0.504
+    m_Value: 1
   clamp:
     m_OverrideState: 0
     m_Value: 65472
@@ -65,7 +65,7 @@ MonoBehaviour:
     m_Value: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.632
+    m_Value: 0.462
   response:
     m_OverrideState: 1
     m_Value: 0.8
@@ -87,10 +87,10 @@ MonoBehaviour:
   active: 1
   postExposure:
     m_OverrideState: 1
-    m_Value: 0.79
+    m_Value: 0.68
   contrast:
     m_OverrideState: 1
-    m_Value: 10
+    m_Value: 64
   colorFilter:
     m_OverrideState: 0
     m_Value: {r: 1, g: 1, b: 1, a: 1}
@@ -99,7 +99,7 @@ MonoBehaviour:
     m_Value: 0
   saturation:
     m_OverrideState: 1
-    m_Value: 18
+    m_Value: 0
 --- !u!114 &-1532342899252936638
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -115,13 +115,13 @@ MonoBehaviour:
   active: 1
   shadows:
     m_OverrideState: 1
-    m_Value: {x: 0.9393849, y: 0.9473406, z: 1, w: 0.55455124}
+    m_Value: {x: 0.7682797, y: 0.8755137, z: 1, w: 0.07468879}
   midtones:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 1, z: 1, w: 0}
+    m_Value: {x: 0.92767745, y: 0.9788752, z: 1, w: 0}
   highlights:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 1, z: 1, w: 0.79646045}
+    m_Value: {x: 1, y: 0.95878917, z: 0.9547973, w: 0}
   shadowsStart:
     m_OverrideState: 0
     m_Value: 0
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7fd9488000d3734a9e00ee676215985, type: 3}
-  m_Name: Key1Global
+  m_Name: key1global
   m_EditorClassIdentifier: 
   components:
   - {fileID: 849379129802519247}
@@ -168,7 +168,7 @@ MonoBehaviour:
   active: 1
   mode:
     m_OverrideState: 1
-    m_Value: 2
+    m_Value: 1
   neutralHDRRangeReductionMode:
     m_OverrideState: 0
     m_Value: 2
@@ -208,13 +208,13 @@ MonoBehaviour:
   active: 1
   color:
     m_OverrideState: 1
-    m_Value: {r: 0, g: 0, b: 0, a: 1}
+    m_Value: {r: 0.674, g: 0.5154118, b: 0.2061647, a: 1}
   center:
     m_OverrideState: 1
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.222
+    m_Value: 0.291
   smoothness:
     m_OverrideState: 1
     m_Value: 0.291
