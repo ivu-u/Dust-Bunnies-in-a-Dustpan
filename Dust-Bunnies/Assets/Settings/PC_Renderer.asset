@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 668a555ab15d809469a6fcebd89bee0b, type: 3}
   m_Name: God Rays
   m_EditorClassIdentifier: 
-  m_Active: 1
+  m_Active: 0
   settings:
     downsampling: 1
     stage: 2
