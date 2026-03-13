@@ -1,6 +1,6 @@
 {
     "version": 1,
-    "name": "PlayerInputs",
+    "name": "InputActionMaps",
     "maps": [
         {
             "name": "Default",
@@ -958,6 +958,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Return",
+                    "type": "Button",
+                    "id": "ca34a66a-a77a-4cd6-b95f-5fb85af6c051",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1004,6 +1013,45 @@
                     "action": "Rotate",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "a1322a9d-34ff-4cce-b373-d4a5e7cf31b0",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Return",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "DEBUG",
+            "id": "f7982395-7dd3-41c4-a3d7-6997b3a8505a",
+            "actions": [
+                {
+                    "name": "NextScene",
+                    "type": "Button",
+                    "id": "2214a594-77b7-4de4-a71c-bbc19c39a651",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "207e127b-cbfd-44b8-b281-dad11eabb1aa",
+                    "path": "<Keyboard>/n",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "NextScene",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

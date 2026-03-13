@@ -6,7 +6,6 @@ using UnityEngine;
 /// </summary>
 public class PlayerCamera : MonoBehaviour
 {
-    [SerializeField] private Player player;
     [SerializeField] private Transform camHead;
     [SerializeField] private Camera playerCamera;
 
@@ -56,13 +55,10 @@ public class PlayerCamera : MonoBehaviour
         originalFOV = playerCamera.fieldOfView;
     }
 
-    void Update() {
-        CameraMovement();
-    }
-
-    private void CameraMovement() {
+    // Rn this is getting called from the player default state but im not sure if that's correct - Jazz
+    public void CameraMovement(Vector2 look) {
         // Rotate player left/right with mouse X movement, with smoothing
-        currRotationSpeedZ = Mathf.Lerp(currRotationSpeedZ, player.LookVector.x * rotationSpeed, Time.deltaTime * lookSmoothing);
+        currRotationSpeedZ = Mathf.Lerp(currRotationSpeedZ, look.x * rotationSpeed, Time.deltaTime * lookSmoothing);
         transform.Rotate(Vector3.up * currRotationSpeedZ);
 
         // Manual Cam Controls
@@ -90,36 +86,40 @@ public class PlayerCamera : MonoBehaviour
         }
     }
 
-    // LateUpdate is used to ensure camera updates happen after all movement/rotation in Update
-    void LateUpdate() {
-        if (currentCamState == CamState.Free) {
-            CamFree();
-        }
-    }
+    //LateUpdate is used to ensure camera updates happen after all movement/rotation in Update
+    //void LateUpdate() {
+    //    if (currentCamState == CamState.Free) {
+    //        CamFree();
+    //    }
+    //}     // Commented out - Jazz
 
-    // Called on Trigger while player is in the zone and on exit
+    // TODO: uncomment this out and fix to work with new inputs - Jazz
+    /// <summary>
+    /// Called on Trigger while player is in the zone and on exit
+    /// </summary>
     public void CollideWithDeskOverlookZone(DeskOverlookZone zone, bool exiting) {
-        if (currentCamState == CamState.LockedOverhead) {
-            mouseYIntegrator += Time.deltaTime * player.LookVector.y;
-            if (mouseYIntegrator > overheadExitMouseYThreshold
-                    || !AngleInRange(transform.localEulerAngles.y, zone.triggerDirectionMinAngle, zone.triggerDirectionMaxAngle)
-                    || exiting) {
-                SetCamStateReturnFree();
-            }
-        }
-        else {
-            float angleToZone = transform.localEulerAngles.y;
-            if (AngleInRange(angleToZone, zone.triggerDirectionMinAngle, zone.triggerDirectionMaxAngle)
-                && currentCamState == CamState.Free
-                && camHead.localEulerAngles.x > overheadEnterAngle && camHead.localEulerAngles.x < 90f) {
-                SetCamStateLockedOverhead();
-            }
-        }
+        //if (currentCamState == CamState.LockedOverhead) {
+        //    mouseYIntegrator += Time.deltaTime * player.LookVector.y;
+        //    if (mouseYIntegrator > overheadExitMouseYThreshold
+        //            || !AngleInRange(transform.localEulerAngles.y, zone.triggerDirectionMinAngle, zone.triggerDirectionMaxAngle)
+        //            || exiting) {
+        //        SetCamStateReturnFree();
+        //    }
+        //}
+        //else {
+        //    float angleToZone = transform.localEulerAngles.y;
+        //    if (AngleInRange(angleToZone, zone.triggerDirectionMinAngle, zone.triggerDirectionMaxAngle)
+        //        && currentCamState == CamState.Free
+        //        && camHead.localEulerAngles.x > overheadEnterAngle && camHead.localEulerAngles.x < 90f) {
+        //        SetCamStateLockedOverhead();
+        //    }
+        //}
     }
 
-    private void CamFree() {
+    // calling this is CameraMovement() atm - Jazz
+    public void CamFree(Vector2 look) {
         Vector3 e = camHead.localEulerAngles;
-        currRotationSpeedX = Mathf.Lerp(currRotationSpeedX, player.LookVector.y * rotationSpeed, Time.deltaTime * lookSmoothing);
+        currRotationSpeedX = Mathf.Lerp(currRotationSpeedX, look.y * rotationSpeed, Time.deltaTime * lookSmoothing);
         e.x -= currRotationSpeedX;
         e.x = RestrictAngle(e.x, -85f, 85f);
         camHead.localEulerAngles = e;
