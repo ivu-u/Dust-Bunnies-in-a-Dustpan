@@ -24,6 +24,13 @@ public class PlayerMovement : MonoBehaviour
         move = transform.TransformDirection(move);
         move.Normalize();
         characterController.SimpleMove(move * speed);
+
+        // TODO: update this SFX system
+        if (inputVector.magnitude > 0) {
+            SetMovementState(true);
+        } else {
+            SetMovementState(false);    // TODO: bad
+        }
     }
 
 

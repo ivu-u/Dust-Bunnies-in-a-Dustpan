@@ -18,6 +18,8 @@ public class InputReader : MonoBehaviour
     // EVENTS   ---
     public event System.Action OnInteractPerformed;
     public event System.Action OnInteractExit;
+    public event System.Action OnRotatePerformed;
+    public event System.Action OnRotateExit;
 
     // DEBUG
     public event System.Action OnNextScenePerformed;
@@ -31,9 +33,10 @@ public class InputReader : MonoBehaviour
     }
 
     void OnEnable() {
-        //_inputs.Enable();
         _inputs.Default.Interact.performed += InteractPerformed;
         _inputs.Interact.Return.performed += InteractExitPerformed;
+        _inputs.Interact.StartRotate.performed += RotatePerformed;
+        _inputs.Interact.StartRotate.canceled += RotatePerformed;
 
         // DEBUG
         _inputs.DEBUG.NextScene.performed += NextScenePerformed;
@@ -42,6 +45,8 @@ public class InputReader : MonoBehaviour
     void OnDisable() {
         _inputs.Default.Interact.performed -= InteractPerformed;
         _inputs.Interact.Return.performed -= InteractExitPerformed;
+        _inputs.Interact.StartRotate.performed -= RotatePerformed;
+        _inputs.Interact.StartRotate.canceled -= RotatePerformed;
 
         // DEBUG
         _inputs.DEBUG.NextScene.performed -= NextScenePerformed;
@@ -69,6 +74,12 @@ public class InputReader : MonoBehaviour
 
     private void InteractExitPerformed(InputAction.CallbackContext _) =>
         OnInteractExit?.Invoke();
+
+    private void RotatePerformed(InputAction.CallbackContext context) {
+        if (context.performed) OnRotatePerformed?.Invoke();
+        else if (context.canceled) OnRotateExit?.Invoke();
+    }
+
     private void NextScenePerformed(InputAction.CallbackContext _) =>
         OnNextScenePerformed?.Invoke();
 }

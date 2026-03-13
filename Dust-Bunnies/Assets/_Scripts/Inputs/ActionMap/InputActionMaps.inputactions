@@ -967,6 +967,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "StartRotate",
+                    "type": "Button",
+                    "id": "f0ea94af-f57a-43c6-bbfa-552b9aa6111c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1000,6 +1009,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Rotate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e6aa1481-3f14-442b-938b-feb2bf8727fd",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "StartRotate",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

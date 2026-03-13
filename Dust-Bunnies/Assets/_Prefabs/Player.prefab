@@ -217,6 +217,7 @@ MonoBehaviour:
   hold_point: {fileID: 3108348115123272139}
   moveTime: 1
   rotationSpeed: 0.5
+  pickUpDistance: 1
 --- !u!114 &692960134869052235
 MonoBehaviour:
   m_ObjectHideFlags: 0

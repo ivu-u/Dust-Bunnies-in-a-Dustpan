@@ -1053,6 +1053,15 @@ public partial class @InputActionMaps: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""StartRotate"",
+                    ""type"": ""Button"",
+                    ""id"": ""f0ea94af-f57a-43c6-bbfa-552b9aa6111c"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -1086,6 +1095,17 @@ public partial class @InputActionMaps: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Rotate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e6aa1481-3f14-442b-938b-feb2bf8727fd"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""StartRotate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1211,6 +1231,7 @@ public partial class @InputActionMaps: IInputActionCollection2, IDisposable
         m_Interact_Zoom = m_Interact.FindAction("Zoom", throwIfNotFound: true);
         m_Interact_Rotate = m_Interact.FindAction("Rotate", throwIfNotFound: true);
         m_Interact_Return = m_Interact.FindAction("Return", throwIfNotFound: true);
+        m_Interact_StartRotate = m_Interact.FindAction("StartRotate", throwIfNotFound: true);
         // DEBUG
         m_DEBUG = asset.FindActionMap("DEBUG", throwIfNotFound: true);
         m_DEBUG_NextScene = m_DEBUG.FindAction("NextScene", throwIfNotFound: true);
@@ -1679,6 +1700,7 @@ public partial class @InputActionMaps: IInputActionCollection2, IDisposable
     private readonly InputAction m_Interact_Zoom;
     private readonly InputAction m_Interact_Rotate;
     private readonly InputAction m_Interact_Return;
+    private readonly InputAction m_Interact_StartRotate;
     /// <summary>
     /// Provides access to input actions defined in input action map "Interact".
     /// </summary>
@@ -1702,6 +1724,10 @@ public partial class @InputActionMaps: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Interact/Return".
         /// </summary>
         public InputAction @Return => m_Wrapper.m_Interact_Return;
+        /// <summary>
+        /// Provides access to the underlying input action "Interact/StartRotate".
+        /// </summary>
+        public InputAction @StartRotate => m_Wrapper.m_Interact_StartRotate;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -1737,6 +1763,9 @@ public partial class @InputActionMaps: IInputActionCollection2, IDisposable
             @Return.started += instance.OnReturn;
             @Return.performed += instance.OnReturn;
             @Return.canceled += instance.OnReturn;
+            @StartRotate.started += instance.OnStartRotate;
+            @StartRotate.performed += instance.OnStartRotate;
+            @StartRotate.canceled += instance.OnStartRotate;
         }
 
         /// <summary>
@@ -1757,6 +1786,9 @@ public partial class @InputActionMaps: IInputActionCollection2, IDisposable
             @Return.started -= instance.OnReturn;
             @Return.performed -= instance.OnReturn;
             @Return.canceled -= instance.OnReturn;
+            @StartRotate.started -= instance.OnStartRotate;
+            @StartRotate.performed -= instance.OnStartRotate;
+            @StartRotate.canceled -= instance.OnStartRotate;
         }
 
         /// <summary>
@@ -2128,6 +2160,13 @@ public partial class @InputActionMaps: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnReturn(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "StartRotate" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnStartRotate(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "DEBUG" which allows adding and removing callbacks.
