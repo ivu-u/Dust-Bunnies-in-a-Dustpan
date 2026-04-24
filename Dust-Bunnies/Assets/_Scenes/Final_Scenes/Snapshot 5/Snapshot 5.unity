@@ -649,11 +649,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!4 &965816419 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2082368761434107185, guid: c380d9ea340d6a94da5fc04f55f47632, type: 3}
-  m_PrefabInstance: {fileID: 4428421628590289400}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1128411177
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1221,7 +1216,7 @@ PrefabInstance:
     - target: {fileID: 6899204380572781638, guid: 1e9cc19460a655d47b93292d9a410758, type: 3}
       propertyPath: room
       value: 
-      objectReference: {fileID: 965816419}
+      objectReference: {fileID: 4428421628590289401}
     - target: {fileID: 6899204380572781638, guid: 1e9cc19460a655d47b93292d9a410758, type: 3}
       propertyPath: sceneLoader
       value: 
@@ -1316,6 +1311,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c380d9ea340d6a94da5fc04f55f47632, type: 3}
+--- !u!4 &4428421628590289401 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3491603350840514963, guid: c380d9ea340d6a94da5fc04f55f47632, type: 3}
+  m_PrefabInstance: {fileID: 4428421628590289400}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
